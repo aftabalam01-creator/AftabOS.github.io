@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/AftabOS.github.io/", // 👈 must match your repo name exactly
+  base: "/AftabOS.github.io/", 
 });
