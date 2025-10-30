@@ -1,0 +1,495 @@
+/* ==========================================================
+   AftabOS Theme — Futuristic Cyber-AI Portfolio Styling
+   Author: Aftab Alam Masjidi
+   ========================================================== */
+
+:root {
+  --bg: #070b10;
+  --surface: #0f141b;
+  --ink: #e8f3ff;
+  --muted: #a3b3cc;
+  --accent: #2ecfff;
+  --accent2: #00ffa9;
+  --glow: 0 0 30px rgba(46, 207, 255, 0.2),
+          0 0 15px rgba(0, 255, 169, 0.15);
+  --card-border: rgba(46, 207, 255, 0.15);
+}
+
+/* ----------------------------------------------------------
+   GLOBAL STYLES
+---------------------------------------------------------- */
+body {
+  background: radial-gradient(1200px 700px at 70% -10%, rgba(46, 207, 255, 0.1), transparent 70%),
+              radial-gradient(800px 500px at -10% 30%, rgba(0, 255, 169, 0.08), transparent 60%),
+              var(--bg);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  color: var(--ink);
+  text-shadow: 0 0 15px rgba(46, 207, 255, 0.35);
+}
+
+h1 {
+  font-size: 2.8rem;
+  letter-spacing: 0.4px;
+  font-weight: 800;
+}
+h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+p {
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+section {
+  margin: 80px auto;
+  max-width: 1150px;
+  padding: 0 24px;
+}
+
+/* ----------------------------------------------------------
+   CARD COMPONENTS
+---------------------------------------------------------- */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  box-shadow: var(--glow);
+  padding: 22px 24px;
+  backdrop-filter: blur(6px);
+  transition: all 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 40px rgba(46, 207, 255, 0.3);
+}
+
+/* ----------------------------------------------------------
+   BADGES
+---------------------------------------------------------- */
+.badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background: #0b1016;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #bde3ff;
+  box-shadow: inset 0 0 6px rgba(46, 207, 255, 0.15);
+}
+
+/* ----------------------------------------------------------
+   BUTTONS
+---------------------------------------------------------- */
+.btn {
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1px solid var(--accent);
+  background: linear-gradient(180deg, rgba(46, 207, 255, 0.1), rgba(46, 207, 255, 0.03));
+  color: var(--ink);
+  box-shadow: 0 0 12px rgba(46, 207, 255, 0.15);
+  transition: all 0.3s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(0, 255, 169, 0.25);
+  border-color: var(--accent2);
+}
+.btn-alt {
+  border-color: var(--accent2);
+  background: linear-gradient(180deg, rgba(0, 255, 169, 0.08), rgba(0, 255, 169, 0.02));
+}
+
+/* ----------------------------------------------------------
+   FOOTER
+---------------------------------------------------------- */
+footer {
+  text-align: center;
+  color: var(--muted);
+  margin: 100px 0 60px;
+  font-size: 0.9rem;
+}
+
+/* ----------------------------------------------------------
+   FADE ANIMATION
+---------------------------------------------------------- */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1s ease-out;
+}
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ----------------------------------------------------------
+   HERO SECTION BACKGROUND
+---------------------------------------------------------- */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 120px 20px 80px;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://assets.codepen.io/13471/particles-light.svg") center/cover;
+  opacity: 0.12;
+  animation: movebg 40s linear infinite;
+  z-index: 0;
+}
+@keyframes movebg {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 500px; }
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin-top: 12px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 12px rgba(46, 207, 255, 0.4);
+}
+.hero .pill {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid rgba(46, 207, 255, 0.4);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  backdrop-filter: blur(3px);
+}
+
+.glow-pill {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(46, 207, 255, 0.4),
+      0 0 20px rgba(0, 255, 169, 0.15);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(46, 207, 255, 0.6),
+      0 0 50px rgba(0, 255, 169, 0.25);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(46, 207, 255, 0.4),
+      0 0 20px rgba(0, 255, 169, 0.15);
+  }
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 780px;
+  margin: 18px auto 0;
+  line-height: 1.7;
+}
+.hero .cta {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ----------------------------------------------------------
+   NAVIGATION BAR — FUTURISTIC AFTABOS STYLE
+---------------------------------------------------------- */
+.nav-bar {
+  background: rgba(10, 15, 20, 0.9);
+  border-bottom: 1px solid rgba(46, 207, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 255, 169, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 64px;
+}
+
+.nav-logo {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent);
+
+  text-shadow: 0 0 8px rgba(46, 207, 255, 0.5);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+/* underline hover animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--accent2);
+  box-shadow: 0 0 8px var(--accent2);
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: var(--accent2);
+  text-shadow: 0 0 8px rgba(0, 255, 169, 0.6);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(15, 20, 25, 0.95);
+  border: 1px solid rgba(46, 207, 255, 0.15);
+  border-radius: 10px;
+  min-width: 190px;
+  padding: 10px 0;
+  display: none;
+  box-shadow: 0 0 20px rgba(46, 207, 255, 0.15);
+  backdrop-filter: blur(10px);
+}
+
+.dropdown-menu li {
+  padding: 6px 18px;
+}
+.dropdown-menu li a {
+  color: var(--muted);
+  display: block;
+  transition: color 0.25s, background 0.25s;
+}
+.dropdown-menu li a:hover {
+  color: var(--accent);
+  background: rgba(46, 207, 255, 0.08);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Mobile adjustments */
+@media (max-width: 820px) {
+  .nav-container {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    padding-bottom: 10px;
+  }
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    background: rgba(10, 15, 20, 0.9);
+  }
+}
+
+.showcase-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.4);
+}
+
+.showcase-item:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .twocol {
+    flex-direction: column;
+  }
+  .embed-container {
+    height: auto !important;
+  }
+}
+
+.showcase-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(0, 200, 255, 0.4);
+}
+
+.showcase-item:hover img {
+  transform: scale(1.05);
+}
+
+
+/* ==========================================================
+   MBZUAI Vision — Signature Glowing Button
+   ========================================================== */
+.btn-vision {
+  position: relative;
+  top: 2px; /* ✅ Fix alignment — brings it perfectly level */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent2);
+  border: 1px solid;
+  border-color: rgba(0, 255, 169, 0.5);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 255, 169, 0.12),
+    rgba(0, 255, 169, 0.03)
+  );
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  font-size: 1.05rem;
+  padding: 12px 24px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(0, 255, 169, 0.25);
+  text-shadow: 0 0 10px rgba(0, 255, 169, 0.6);
+  animation: mbzuaiGlow 3.5s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+
+.btn-vision:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 35px rgba(0, 255, 169, 0.55),
+              0 0 20px rgba(46, 207, 255, 0.3);
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 169, 0.15) 0%,
+    rgba(0, 255, 169, 0.05) 70%
+  );
+}
+
+/* ✦ Pulsating aura around button */
+.btn-vision::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-color: rgba(0, 255, 169, 0.5);
+  border-radius: 14px;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(0, 255, 169, 0.35),
+    rgba(0, 255, 169, 0.05)
+  );
+  filter: blur(8px);
+  opacity: 0.7;
+  animation: mbzuaiPulse 3s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes mbzuaiGlow {
+  0% {
+    text-shadow: 0 0 8px rgba(0, 255, 169, 0.5),
+                 0 0 12px rgba(46, 207, 255, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 18px rgba(0, 255, 169, 0.8),
+                 0 0 30px rgba(46, 207, 255, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(0, 255, 169, 0.5),
+                 0 0 12px rgba(46, 207, 255, 0.3);
+  }
+}
+
+@keyframes mbzuaiPulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.08); }
+}
+
+/* --- NAV BUTTON NORMALIZER (forces perfect alignment) --- */
+.nav-links {
+  display: flex;
+  align-items: center;        /* ensure all buttons share the same baseline */
+}
+
+.nav-links a.btn,
+.nav-links a.btn-vision {
+  display: inline-flex;       /* consistent layout model */
+  align-items: center;        /* vertical centering */
+  justify-content: center;
+  box-sizing: border-box;
+  height: 40px;               /* << set one height for ALL nav buttons */
+  padding: 0 18px;            /* keep side padding only */
+  line-height: 1;             /* remove baseline drift */
+  margin: 0;                  /* kill stray margins */
+  vertical-align: middle;     /* safety */
+}
+
+/* --- MBZUAI magic button (keep your glow) --- */
+.btn-vision {
+  /* remove any manual top offsets */
+  top: 0;                     /* <-- important */
+  position: relative;
+  color: var(--accent2);
+  border: 1px solid;
+  border-color: rgba(0, 255, 169, 0.5);
+  background: linear-gradient(180deg, rgba(0,255,169,0.12), rgba(0,255,169,0.03));
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  font-size: 1.05rem;         /* can keep larger size; height handles alignment */
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 0 18px rgba(0,255,169,0.25);
+  text-shadow: 0 0 10px rgba(0,255,169,0.6);
+  animation: mbzuaiGlow 3.5s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+.btn-vision:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+/* Optional: if your default .btn has a 2px border, match it here instead */
+
