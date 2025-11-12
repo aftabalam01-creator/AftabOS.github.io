@@ -493,3 +493,78 @@ footer {
 
 /* Optional: if your default .btn has a 2px border, match it here instead */
 
+/* --- Fix: Responsive Navbar Height --- */
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 10px 16px;
+    height: auto; /* allow flexible height */
+  }
+
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  header {
+    padding-top: 100px !important; /* adds space below navbar */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}
+
+
+/* --- Fix: Mobile Scaling for Buttons & Cards --- */
+@media (max-width: 768px) {
+  .btn,
+  .btn-alt,
+  .btn-vision {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    width: 100%; /* make them stack nicely */
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .card {
+    padding: 18px 16px !important;
+    font-size: 0.9rem;
+  }
+
+  .chart-container {
+    padding: 10px !important;
+    height: auto !important;
+  }
+
+  .twocol {
+    display: flex;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+
+  img,
+  iframe {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+
+html, body {
+  overflow-x: hidden;
+}
+
+
