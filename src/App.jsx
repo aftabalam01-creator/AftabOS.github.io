@@ -1450,7 +1450,7 @@ const Feed = () => (
           }}
         >
           <img
-            src="/LinkedInPost1.PNG"
+            src="/files/LinkedInPost1.PNG"
             alt="AI × Deep Learning Research"
             style={{
               width: "100%",
@@ -1516,7 +1516,7 @@ const Feed = () => (
           }}
         >
           <img
-            src="/LinkedInPost2.PNG"
+            src="/files/LinkedInPost2.PNG"
             alt="Barry University AI Center & Stamps Scholar Update"
             style={{
               width: "100%",
