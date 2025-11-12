@@ -1606,19 +1606,21 @@ const Contact = () => (
         <h3>Documents</h3>
         <ul>
           <li>
-            <a href="files/AftabAlamMasjidi_CV.pdf" target="_blank"
-  rel="noopener noreferrer">Academic CV (PDF)</a>
-          </li>
-          <li>
-            <a href="files\Aftab Alam Masjidi - Statement of Purpose - MBZUAI.pdf" target="_blank"
-  rel="noopener noreferrer">MBZUAI Statement of Purpose (PDF)</a>
-          </li>
-          <li>
-            <a href="files/Aftab BarryUniversity Transcript.pdf" target="_blank"
-  rel="noopener noreferrer">
-              Academic Transcript (PDF)
-            </a>
-          </li>
+  <a href="/files/AftabAlamMasjidi_CV.pdf" target="_blank" rel="noopener noreferrer">
+    Academic CV (PDF)
+  </a>
+</li>
+<li>
+  <a href="/files/SOP_MBZUAI_AftabMasjidi.pdf" target="_blank" rel="noopener noreferrer">
+    MBZUAI Statement of Purpose (PDF)
+  </a>
+</li>
+<li>
+  <a href="/files/Aftab_BarryUniversity_Transcript.pdf" target="_blank" rel="noopener noreferrer">
+    Academic Transcript (PDF)
+  </a>
+</li>
+
         </ul>
       </Card>
     </div>
