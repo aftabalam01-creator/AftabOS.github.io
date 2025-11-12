@@ -1423,72 +1423,71 @@ const Feed = () => (
           flexWrap: "wrap",
         }}
       >
-        {/* Post 1 */}
-        <a
-          href="https://www.linkedin.com/posts/aftabalammasjidi_ai-machinelearning-deeplearning-activity-7388522435047862273-bXu5"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            flex: 1,
-            textDecoration: "none",
-            color: "inherit",
-            borderRadius: "14px",
-            overflow: "hidden",
-            background: "rgba(0,0,0,0.4)",
-            boxShadow: "0 0 25px rgba(46,207,255,0.12)",
-            transition: "transform 0.4s ease, box-shadow 0.4s ease",
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.transform = "translateY(-6px)";
-            e.currentTarget.style.boxShadow = "0 0 40px rgba(0,255,169,0.25)";
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.transform = "translateY(0)";
-            e.currentTarget.style.boxShadow = "0 0 25px rgba(46,207,255,0.12)";
-          }}
-        >
-          <img
-            <img
-              src="/AftabOS.github.io/files/LinkedInPost1.PNG"
-              alt="AI × Deep Learning Research"
-            style={{
-              width: "100%",
-              height: "270px",
-              objectFit: "cover",
-              display: "block",
-              borderBottom: "1px solid rgba(255,255,255,0.08)",
-            }}
-          />
-          <div style={{ padding: "14px" }}>
-            <div
-              style={{
-                fontWeight: "600",
-                fontSize: "1rem",
-                color: "#e8f3ff",
-              }}
-            >
-              AI × Deep Learning Research
-            </div>
-            <p
-              style={{
-                color: "#9da8c4",
-                fontSize: "0.9rem",
-                marginTop: "4px",
-              }}
-            >
-              Comparative study of ML & DL models for predictive analytics.
-            </p>
-            <span
-              style={{
-                color: "#2ecfff",
-                display: "inline-block",
-                marginTop: "8px",
-              }}
-            >
-              View on LinkedIn ↗
-            </span>
-          </div>
-        </a>
+     {/* Post 1 */}
+<a
+  href="https://www.linkedin.com/posts/aftabalammasjidi_ai-machinelearning-deeplearning-activity-7388522435047862273-bXu5"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    flex: 1,
+    textDecoration: "none",
+    color: "inherit",
+    borderRadius: "14px",
+    overflow: "hidden",
+    background: "rgba(0,0,0,0.4)",
+    boxShadow: "0 0 25px rgba(46,207,255,0.12)",
+    transition: "transform 0.4s ease, box-shadow 0.4s ease",
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.transform = "translateY(-6px)";
+    e.currentTarget.style.boxShadow = "0 0 40px rgba(0,255,169,0.25)";
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.transform = "translateY(0)";
+    e.currentTarget.style.boxShadow = "0 0 25px rgba(46,207,255,0.12)";
+  }}
+>
+  <img
+    src="/AftabOS.github.io/files/LinkedInPost1.PNG"
+    alt="AI × Deep Learning Research"
+    style={{
+      width: "100%",
+      height: "270px",
+      objectFit: "cover",
+      display: "block",
+      borderBottom: "1px solid rgba(255,255,255,0.08)",
+    }}
+  />
+  <div style={{ padding: "14px" }}>
+    <div
+      style={{
+        fontWeight: "600",
+        fontSize: "1rem",
+        color: "#e8f3ff",
+      }}
+    >
+      AI × Deep Learning Research
+    </div>
+    <p
+      style={{
+        color: "#9da8c4",
+        fontSize: "0.9rem",
+        marginTop: "4px",
+      }}
+    >
+      Comparative study of ML & DL models for predictive analytics.
+    </p>
+    <span
+      style={{
+        color: "#2ecfff",
+        display: "inline-block",
+        marginTop: "8px",
+      }}
+    >
+      View on LinkedIn ↗
+    </span>
+  </div>
+</a>
 
         {/* Post 2 */}
         <a
