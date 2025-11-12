@@ -524,21 +524,19 @@ const PROJECTS = [
 
 const PAPERS = [
   {
-    title: "Discrete Math I — Hash Functions ",
-    notes:
-      "Survey + implementation notes; collision properties; cryptographic vs non-cryptographic trade-offs.",
-    link: "/files/Aftab Alam - Hash Functions in Discrete Mathematics.pdf",
+    title: "Discrete Math I — Hash Functions",
+    notes: "Survey + implementation notes; collision properties; cryptographic vs non-cryptographic trade-offs.",
+    link: "/AftabOS.github.io/files/Aftab%20Alam%20-%20Hash%20Functions%20in%20Discrete%20Mathematics.pdf",
   },
   {
     title: "Discrete Math II — Minimum Spanning Tree & Prim’s Algorithm",
-    notes:
-      "Graph theory primer; proof sketch; complexity; code; applications in networks.",
-    link: "/files/Aftab Alam - Minimal Spanning Tree and Prim’s Algorithm.pdf",
+    notes: "Graph theory primer; proof sketch; complexity; code; applications in networks.",
+    link: "/AftabOS.github.io/files/Aftab%20Alam%20-%20Minimal%20Spanning%20Tree%20and%20Prim%E2%80%99s%20Algorithm.pdf",
   },
   {
     title: "Biometrics — Selected Papers",
     notes: "Ethical, AI-driven, and privacy-focused analyses of biometric technologies.",
-    link: "/files/BiOMETRICSS.pdf",
+    link: "/AftabOS.github.io/files/BiOMETRICSS.pdf",
   },
 ];
 
@@ -1089,7 +1087,7 @@ const Projects = () => (
       }}
     >
       <img
-        src="/ML Stock Prediction.gif"
+        src="/AftabOS.github.io/files/ML%20Stock%20Prediction.gif"
         alt="ML Stock Prediction Demo"
         style={{
           width: "100%",
@@ -1450,8 +1448,9 @@ const Feed = () => (
           }}
         >
           <img
-            src="/files/LinkedInPost1.PNG"
-            alt="AI × Deep Learning Research"
+            <img
+              src="/AftabOS.github.io/files/LinkedInPost1.PNG"
+              alt="AI × Deep Learning Research"
             style={{
               width: "100%",
               height: "270px",
@@ -1516,8 +1515,8 @@ const Feed = () => (
           }}
         >
           <img
-            src="/files/LinkedInPost2.PNG"
-            alt="Barry University AI Center & Stamps Scholar Update"
+              src="/AftabOS.github.io/files/LinkedInPost2.PNG"
+              alt="Barry University AI Center & Stamps Scholar Update"
             style={{
               width: "100%",
               height: "270px",
@@ -1606,21 +1605,22 @@ const Contact = () => (
         <h3>Documents</h3>
         <ul>
           <li>
-  <a href="/files/AftabAlamMasjidi_CV.pdf" target="_blank" rel="noopener noreferrer">
-    Academic CV (PDF)
-  </a>
-</li>
-<li>
-  <a href="/files/SOP_MBZUAI_AftabMasjidi.pdf" target="_blank" rel="noopener noreferrer">
-    MBZUAI Statement of Purpose (PDF)
-  </a>
-</li>
-<li>
-  <a href="/files/Aftab_BarryUniversity_Transcript.pdf" target="_blank" rel="noopener noreferrer">
-    Academic Transcript (PDF)
-  </a>
-</li>
-
+            <a href="/AftabOS.github.io/files/AftabAlamMasjidi_CV.pdf" target="_blank" rel="noopener noreferrer">
+              Academic CV (PDF)
+            </a>
+          </li>
+          
+          <li>
+            <a href="/AftabOS.github.io/files/Aftab%20Alam%20-%20Statement%20of%20Purpose%20-%20MBZUAI.pdf" target="_blank" rel="noopener noreferrer">
+              MBZUAI Statement of Purpose (PDF)
+            </a>
+          </li>
+          
+          <li>
+            <a href="/AftabOS.github.io/files/AftabBarryUniversityTranscript.pdf" target="_blank" rel="noopener noreferrer">
+              Academic Transcript (PDF)
+            </a>
+          </li>
         </ul>
       </Card>
     </div>
