@@ -625,7 +625,7 @@ This research serves as the foundation for future PhD-level exploration, includi
 
 const MBZUAI_VISION = `
 Aftab's Vision at MBZUAI (Full Statement)
-_______________________________________________________
+________________________
 
 At MBZUAI, my vision is to develop a Predictive Cyber Defense Framework that fuses machine intelligence with human interpretability, enabling security systems that do not merely respond to attacks but anticipate and adapt in real time. The goal is to bridge a long-standing gap between data-driven learning models and the dynamic, adversarial nature of cyber environments.
 
