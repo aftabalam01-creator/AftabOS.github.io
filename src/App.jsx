@@ -514,11 +514,10 @@ const PROJECTS = [
     link: "#",
   },
   {
-    title: "DX Lab — AI Consulting Demos",
-    blurb:
-      "Client‑facing AI prototypes; MLOps pipelines; onboarding curricula; ethics‑aligned delivery.",
-    tech: ["MLOps", "Python", "PM"],
-    link: "#",
+  title: "DX Lab — AI Consulting Demos",
+  blurb: "...",
+  tech: ["MLOps", "Python", "PM"],
+  link: "video:swe"
   },
 ];
 
@@ -1043,10 +1042,24 @@ const Projects = () => (
             ))}
           </div>
           <div style={{ marginTop: "16px" }}>
-            <a href={p.link} target="_blank" rel="noopener noreferrer">
-              {p.link === "#" ? "Docs / Demo (soon)" : "Open ↗"}
-            </a>
-          </div>
+              {p.link === "video:swe" ? (
+                <a
+                  href="#swe-video"
+                  style={{
+                    color: "#2ecfff",
+                    fontWeight: "600",
+                    textDecoration: "none",
+                    cursor: "pointer"
+                  }}
+                >
+                  Demo Video ↗
+                </a>
+              ) : (
+                <a href={p.link} target="_blank" rel="noopener noreferrer">
+                  {p.link === "#" ? "Docs / Demo (soon)" : "Open ↗"}
+                </a>
+              )}
+            </div>
         </Card>
       ))}
     </div>
@@ -1110,18 +1123,18 @@ const Projects = () => (
       boxShadow: "0 0 25px rgba(46,207,255,0.12)",
     }}
   >
-    <video
-      controls
-      style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        borderRadius: "12px",
-      }}
-    >
-      <source src="/AftabOS.github.io/files/SWEProject.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
+    <div id="swe-video" style={{ marginTop: "40px" }}>
+      <video
+        src="/AftabOS.github.io/files/SWEProject.mp4"
+        controls
+        style={{
+          width: "100%",
+          borderRadius: "14px",
+          marginTop: "24px",
+          boxShadow: "0 0 25px rgba(46,207,255,0.18)"
+        }}
+      />
+    </div>
   </div>
   </div>
 </Card>
