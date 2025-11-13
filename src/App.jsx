@@ -1099,31 +1099,32 @@ const Projects = () => (
       />
     </div>
 
-    {/* Right: iframe Demo */}
-    <div
-      className="embed-container showcase-item"
+    {/* Right: Software Engineering Project Video */}
+  <div
+    className="embed-container showcase-item"
+    style={{
+      flex: 1,
+      height: "320px",
+      borderRadius: "12px",
+      overflow: "hidden",
+      backgroundColor: "#0b0b0b",
+      transition: "transform 0.4s ease, box-shadow 0.4s ease",
+      boxShadow: "0 0 25px rgba(46,207,255,0.12)",
+    }}
+  >
+    <video
+      controls
       style={{
-        flex: 1,
-        textAlign: "center",
-        height: "320px",
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
         borderRadius: "12px",
-        overflow: "hidden",
-        backgroundColor: "#0b0b0b",
-        transition: "transform 0.4s ease, box-shadow 0.4s ease",
       }}
     >
-      <iframe
-        title="Demo 2"
-        src="about:blank"
-        style={{
-          width: "100%",
-          height: "100%",
-          borderRadius: "12px",
-          border: "1px solid #222",
-          backgroundColor: "#0b0b0b",
-        }}
-      />
-    </div>
+      <source src="/AftabOS.github.io/files/SWEProject.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
   </div>
 </Card>
 
