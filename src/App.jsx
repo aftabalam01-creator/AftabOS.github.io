@@ -1597,8 +1597,7 @@ const Contact = () => (
           </a>
         </div>
         <p className="muted" style={{ marginTop: "16px", fontSize: "0.85rem" }}>
-          Optional: Add a Calendly link or a simple form using EmailJS. A chat
-          widget (e.g., Chatbase/Botpress) can be inserted globally.
+          Best Way to Reach out is through Email or LinkedIn.
         </p>
       </Card>
       <Card className="half" id = "Documents">
