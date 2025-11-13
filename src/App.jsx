@@ -758,9 +758,7 @@ const Navbar = () => {
           <a href="mailto:aftabalam.masjidi@mymail.barry.edu" className="btn">
             Contact
           </a>
-         <li>
           <a href="#vision" className="btn btn-vision">✦ MBZUAI Vision ✦</a>
-        </li>
         </ul>
       </div>
     </nav>
