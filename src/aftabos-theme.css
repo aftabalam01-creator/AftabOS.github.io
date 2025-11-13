@@ -568,3 +568,13 @@ html, body {
 }
 
 
+.type {
+  white-space: normal !important;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
