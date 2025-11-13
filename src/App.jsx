@@ -1600,7 +1600,7 @@ const Contact = () => (
           </a>
           <a
             className="btn"
-            href="https://linkedin.com/in/aftabalammasjidi"
+            href="https://www.linkedin.com/in/aftabalammasjidi"
             target="_blank"
             rel="noopener noreferrer"
           >
