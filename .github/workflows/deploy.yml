@@ -1,14 +1,14 @@
-name: Deploy AftabOS (build from private repo)
+name: Deploy Vite site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches: [ main ]
   workflow_dispatch:
 
 permissions:
+  contents: read
   pages: write
   id-token: write
-  contents: read
 
 concurrency:
   group: "pages"
@@ -18,11 +18,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout PRIVATE repo
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          repository: aftabalam01-creator/AftabOS-Source
-          token: ${{ secrets.GH_PAT }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -35,7 +32,7 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Upload build artifact
+      - name: Upload build output
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -45,8 +42,8 @@ jobs:
     needs: build
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
-        id: deploy
+        id: deployment
         uses: actions/deploy-pages@v4
