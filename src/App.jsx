@@ -1089,19 +1089,24 @@ const Projects = () => (
           />
         </div>
 
-        {/* Right Video */}
+        {/* Right: Software Engineering Project Video */}
         <div
-          className="embed-container showcase-item"
+          className="showcase-item"
           style={{
             flex: 1,
-            height: "320px",
             borderRadius: "12px",
             overflow: "hidden",
             backgroundColor: "#0b0b0b",
+            transition: "transform 0.4s ease, box-shadow 0.4s ease",
+            boxShadow: "0 0 25px rgba(46,207,255,0.12)",
           }}
         >
           <div className="responsive-video">
-            <video src="/files/SWEProject.mp4" controls />
+            <video
+              src="/files/SWEProject.mp4"
+              controls
+              style={{ width: "100%", height: "100%" }}
+            />
           </div>
         </div>
       </div>
