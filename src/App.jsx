@@ -1036,34 +1036,22 @@ const Projects = () => (
             <h3>{p.title}</h3>
             <span className="card-tech-corner">{p.tech[0]}</span>
           </div>
+
           <p>{p.blurb}</p>
+
           <div className="badges">
             {p.tech.map((t) => (
               <Badge key={t}>{t}</Badge>
             ))}
           </div>
-          <div style={{ marginTop: "16px" }}>
-              {p.link === "video:swe" ? (
-                <a
-                  href="#swe-video"
-                  style={{
-                    color: "#2ecfff",
-                    fontWeight: "600",
-                    textDecoration: "none",
-                    cursor: "pointer"
-                  }}
-                >
-                  Demo Video ↗
-                </a>
-              ) : (
-                <a href={p.link} target="_blank" rel="noopener noreferrer">
-                  {p.link === "#" ? "Docs / Demo (soon)" : "Open ↗"}
-                </a>
-              )}
-            </div>
+
+          {/* REMOVE ALL LINKS — NOTHING BELOW */}
         </Card>
       ))}
     </div>
+  </Section>
+);
+
 
 <Card style={{ marginTop: "24px" }}>
   <h3>Showcase: Embedded Environments</h3>
@@ -1124,16 +1112,10 @@ const Projects = () => (
       boxShadow: "0 0 25px rgba(46,207,255,0.12)",
     }}
   >
-    <div id="swe-video" style={{ marginTop: "40px" }}>
+    <div className="responsive-video">
       <video
         src="/files/SWEProject.mp4"
         controls
-        style={{
-          width: "100%",
-          borderRadius: "14px",
-          marginTop: "24px",
-          boxShadow: "0 0 25px rgba(46,207,255,0.18)"
-        }}
       />
     </div>
   </div>
