@@ -1019,7 +1019,6 @@ const LeadershipRecognition = () => (
 );
 
 
-
 const Projects = () => (
   <Section id="projects" title="Projects Lab">
     <div className="grid">
@@ -1044,85 +1043,69 @@ const Projects = () => (
               <Badge key={t}>{t}</Badge>
             ))}
           </div>
-
-          {/* REMOVE ALL LINKS — NOTHING BELOW */}
         </Card>
       ))}
     </div>
-  </Section>
-);
 
+    {/* 🔥 MOVE YOUR SHOWCASE CARD *INSIDE* THE SECTION */}
+    <Card style={{ marginTop: "24px" }}>
+      <h3>Showcase: Embedded Environments</h3>
+      <p>Here you can see my ML Stock Prediction Chart and Web App interactively</p>
 
-<Card style={{ marginTop: "24px" }}>
-  <h3>Showcase: Embedded Environments</h3>
-  <p>
-    Here you can see my ML Stock Prediction Chart and Web App interactively
-  </p>
-
-  <div
-    className="twocol"
-    style={{
-      marginTop: "16px",
-      display: "flex",
-      gap: "16px",
-      alignItems: "stretch",
-      flexWrap: "wrap", // for mobile
-    }}
-  >
-    {/* Left: GIF Demo */}
-    <div
-      className="embed-container showcase-item"
-      style={{
-        flex: 1,
-        textAlign: "center",
-        height: "320px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#0b0b0b",
-        borderRadius: "12px",
-        overflow: "hidden",
-        position: "relative",
-        transition: "transform 0.4s ease, box-shadow 0.4s ease",
-      }}
-    >
-      <img
-        src="/files/ML%20Stock%20Prediction.gif"
-        alt="ML Stock Prediction Demo"
+      <div
+        className="twocol"
         style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "contain",
-          borderRadius: "12px",
-          transition: "transform 0.4s ease",
+          marginTop: "16px",
+          display: "flex",
+          gap: "16px",
+          alignItems: "stretch",
+          flexWrap: "wrap",
         }}
-      />
-    </div>
+      >
+        {/* Left GIF */}
+        <div
+          className="embed-container showcase-item"
+          style={{
+            flex: 1,
+            textAlign: "center",
+            height: "320px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: "#0b0b0b",
+            borderRadius: "12px",
+            overflow: "hidden",
+          }}
+        >
+          <img
+            src="/files/ML%20Stock%20Prediction.gif"
+            alt="ML Stock Prediction Demo"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "contain",
+              borderRadius: "12px",
+            }}
+          />
+        </div>
 
-    {/* Right: Software Engineering Project Video */}
-  <div
-    className="embed-container showcase-item"
-    style={{
-      flex: 1,
-      height: "320px",
-      borderRadius: "12px",
-      overflow: "hidden",
-      backgroundColor: "#0b0b0b",
-      transition: "transform 0.4s ease, box-shadow 0.4s ease",
-      boxShadow: "0 0 25px rgba(46,207,255,0.12)",
-    }}
-  >
-    <div className="responsive-video">
-      <video
-        src="/files/SWEProject.mp4"
-        controls
-      />
-    </div>
-  </div>
-  </div>
-</Card>
-
-
+        {/* Right Video */}
+        <div
+          className="embed-container showcase-item"
+          style={{
+            flex: 1,
+            height: "320px",
+            borderRadius: "12px",
+            overflow: "hidden",
+            backgroundColor: "#0b0b0b",
+          }}
+        >
+          <div className="responsive-video">
+            <video src="/files/SWEProject.mp4" controls />
+          </div>
+        </div>
+      </div>
+    </Card>
   </Section>
 );
 
