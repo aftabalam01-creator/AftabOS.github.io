@@ -500,42 +500,43 @@ const SKILLS = {
 
 const PROJECTS = [
   {
-    title: "Secure Multi‑Role Web Portal (Java/JSP)",
+    title: "Secure Multi-Role Web Portal (Java/JSP)",
     blurb:
-      "End‑to‑end RBAC system; SHA‑256 + salt/pepper; audit logging; normalized MySQL schema; Tomcat deployment.",
-    tech: ["Java", "JSP/JSTL", "MySQL", "Tomcat"],
-    link: "#",
+      "Built a complete RBAC portal with salted SHA-256 authentication, secure session management, audit logging, and a normalized MySQL schema deployed on Tomcat.",
+    tech: ["Java", "JSP", "MySQL", "Tomcat"],
+    link: "#" 
   },
   {
-    title: "Digital Forensics Tutorial (NTFS/MFT)",
+    title: "Digital Forensics Tutorial (NTFS / MFT Analysis)",
     blurb:
-      "Step‑by‑step analysis with FTK Imager & WinHex; resident/non‑resident attributes; data runs (0x80).",
-    tech: ["FTK", "WinHex", "Forensics"],
-    link: "#",
+      "Performed structured NTFS/MFT investigations using FTK Imager and WinHex—mapping file records, resident vs. non-resident attributes, and 0x80 data runs.",
+    tech: ["FTK Imager", "WinHex", "Forensics"],
+    link: "#"
   },
   {
-  title: "DX Lab — AI Consulting Demos",
-  blurb: "...",
-  tech: ["MLOps", "Python", "PM"],
-  link: "video:swe"
-  },
+    title: "WriteHuman — AI-Powered Writing Assistant",
+    blurb:
+      "Designed and prototyped an AI writing assistant with context-aware text refinement, prompt-guided generation, and explainability tooling for academic writing support.",
+    tech: ["Python", "Transformers", "MLOps"],
+    link: "#"
+  }
 ];
 
 const PAPERS = [
   {
     title: "Discrete Math I — Hash Functions",
     notes: "Survey + implementation notes; collision properties; cryptographic vs non-cryptographic trade-offs.",
-    link: "/AftabOS.github.io/files/Aftab%20Alam%20-%20Hash%20Functions%20in%20Discrete%20Mathematics.pdf",
+    link: "/files/Aftab%20Alam%20-%20Hash%20Functions%20in%20Discrete%20Mathematics.pdf",
   },
   {
     title: "Discrete Math II — Minimum Spanning Tree & Prim’s Algorithm",
     notes: "Graph theory primer; proof sketch; complexity; code; applications in networks.",
-    link: "/AftabOS.github.io/files/Aftab%20Alam%20-%20Minimal%20Spanning%20Tree%20and%20Prim%E2%80%99s%20Algorithm.pdf",
+    link: "/files/Aftab%20Alam%20-%20Minimal%20Spanning%20Tree%20and%20Prim%E2%80%99s%20Algorithm.pdf",
   },
   {
     title: "Biometrics — Selected Papers",
     notes: "Ethical, AI-driven, and privacy-focused analyses of biometric technologies.",
-    link: "/AftabOS.github.io/files/BiOMETRICSS.pdf",
+    link: "/files/BiOMETRICSS.pdf",
   },
 ];
 
@@ -1098,7 +1099,7 @@ const Projects = () => (
       }}
     >
       <img
-        src="/AftabOS.github.io/files/ML%20Stock%20Prediction.gif"
+        src="/files/ML%20Stock%20Prediction.gif"
         alt="ML Stock Prediction Demo"
         style={{
           width: "100%",
@@ -1125,7 +1126,7 @@ const Projects = () => (
   >
     <div id="swe-video" style={{ marginTop: "40px" }}>
       <video
-        src="/AftabOS.github.io/files/SWEProject.mp4"
+        src="/files/SWEProject.mp4"
         controls
         style={{
           width: "100%",
@@ -1615,19 +1616,25 @@ const Contact = () => (
         <h3>Documents</h3>
         <ul>
           <li>
-            <a href="/AftabOS.github.io/files/AftabAlamMasjidi_CV.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/files/AftabAlamMasjidi_CV.pdf" target="_blank" rel="noopener noreferrer">
               Academic CV (PDF)
             </a>
           </li>
           
           <li>
-            <a href="/AftabOS.github.io/files/Aftab%20Alam%20-%20Statement%20of%20Purpose%20-%20MBZUAI.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/files/AftabSOPMBZUAI.pdf" target="_blank" rel="noopener noreferrer">
               MBZUAI Statement of Purpose (PDF)
             </a>
           </li>
           
           <li>
-            <a href="/AftabOS.github.io/files/AftabBarryUniversityTranscript.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/files/Nominations.pdf" target="_blank" rel="noopener noreferrer">
+              Nominatoin Letters (PDF)
+            </a>
+          </li>
+          
+          <li>
+            <a href="/files/AftabBarryUniversityTranscript.pdf" target="_blank" rel="noopener noreferrer">
               Academic Transcript (PDF)
             </a>
           </li>
