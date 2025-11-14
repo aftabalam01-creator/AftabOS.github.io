@@ -1460,7 +1460,7 @@ const Feed = () => (
   }}
 >
   <img
-    src="/AftabOS.github.io/files/LinkedInPost1.PNG"
+    src="/Aftabos.com/files/LinkedInPost1.PNG"
     alt="AI × Deep Learning Research"
     style={{
       width: "100%",
