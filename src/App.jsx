@@ -1077,7 +1077,7 @@ const Leadership = () => (
           <div className="card">
             <div style={{ fontSize:"0.68rem", fontWeight:800, color:"var(--cyan)", fontFamily:"'JetBrains Mono',monospace", textTransform:"uppercase", letterSpacing:"0.15em", marginBottom:20 }}>// Founder Roles</div>
             {[
-              { when:"Sept 2025 – Present", role:"Founder & President", org:"AI Club @ Barry University", detail:"Founded and lead active student community exploring AI, ML, and Data Analytics. Organize workshops, hackathons, and guest talks; collaborate with the DX Lab and AI Center." },
+              { when:"Sept 2025 – Present", role:"Founder & President", org:"AI Society @ Barry University", detail:"Founded and lead active student community exploring AI, ML, and Data Analytics. Organize workshops, hackathons, and guest talks; collaborate with the DX Lab and AI Center." },
               { when:"Jan 2024 – Present",  role:"Founder & President", org:"Muslim Students Association", detail:"Founded 50+ member community; coordinate campus-wide educational and cultural events; build cross-cultural partnerships across university departments." },
             ].map((l, i) => <div key={l.org} className="ldr-item" style={i===0?{paddingTop:0}:{}}><div className="ldr-when">{l.when}</div><div><div className="ldr-role">{l.role}</div><div className="ldr-org">{l.org}</div><div className="ldr-detail">{l.detail}</div></div></div>)}
           </div>
