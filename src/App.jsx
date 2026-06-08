@@ -655,11 +655,11 @@ const Terminal = () => {
     { t: "kv",  k: '"honors"',       v: '"Summa Cum Laude"' },
     { t: "kv",  k: '"gpa"',          v: '4.0' },
     { t: "kv",  k: '"scholarship"',  v: '"Stamps Scholar (top 0.5%)"' },
-    { t: "kv",  k: '"next"',         v: '"M.Sc. Cybersecurity @ Aalborg Univ. Copenhagen"' },
-    { t: "kv",  k: '"available"',    v: '"European cybersecurity roles — Sept 2026"' },
+    { t: "kv",  k: '"focus"',         v: '"Business Intelligence, Analytics & Data Leadership"' },
+    { t: "kv",  k: '"available"',    v: '"Afghanistan & MENA region — immediately"' },
     { t: "out", v: '}' },
     { t: "cmd", v: "ping recruiter --status" },
-    { t: "ok",  v: "[✓ OPEN TO HIRE]  Denmark · Scandinavia · EU · Remote" },
+    { t: "ok",  v: "[✓ OPEN TO HIRE]  Kabul · MENA · Remote" },
   ];
   const [vis, setVis] = useState(0);
   useEffect(() => {
@@ -756,7 +756,7 @@ const Hero = () => {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}>
           <div className="hero-badge">
             <span className="badge-dot" />
-            AVAILABLE — Cybersecurity Roles in Europe · Student Assistantships &amp; Full-Time
+            AVAILABLE — BI &amp; Analytics Leadership · Afghanistan &amp; MENA Region
           </div>
         </motion.div>
 
@@ -765,7 +765,7 @@ const Hero = () => {
         </motion.h1>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.45 }}>
-          <div className="hero-title">Cybersecurity Engineer &amp; AI Researcher</div>
+          <div className="hero-title">Data &amp; Business Intelligence Professional · Founder, Baazar Chawk</div>
           <div className="hero-edu">
             <div className="hero-edu-row">
               <strong>B.S. Computer Science</strong>
@@ -777,17 +777,17 @@ const Hero = () => {
               <span>Graduated May 2026</span>
             </div>
             <div className="hero-edu-row">
-              <strong>M.Sc. Cybersecurity</strong>
+              <strong>Founder &amp; CEO</strong>
               <span className="sep">|</span>
-              <span>Aalborg University Copenhagen, Denmark</span>
+              <span>Baazar Chawk — Afghan Digital Marketplace</span>
               <span className="sep">|</span>
-              <span className="hl2">Incoming · 2026 – 2028</span>
+              <span className="hl2">PostgreSQL · KPI Dashboards · AI Analytics</span>
             </div>
           </div>
           <div className="hero-location">
             <span>📍 Miami, FL, USA</span>
-            <span className="arrow">——→</span>
-            <span>Copenhagen, Denmark (Sept 2026)</span>
+            <span className="sep" style={{margin:"0 6px"}}>·</span>
+            <span>Open to Kabul, Afghanistan &amp; MENA Region</span>
           </div>
         </motion.div>
 
@@ -817,7 +817,7 @@ const StatsBar = () => (
           { n: 5,     sfx: "×", cls: "c",     lbl: "President's List", sub: "Consecutive Semesters",         isFloat: false },
           { n: 0.5,   sfx: "%", cls: "g",     lbl: "Stamps Scholar",   sub: "Top 0.5% — Full-Ride Merit",    isFloat: true  },
           { n: 3,     sfx: "",  cls: "p",     lbl: "Major Projects",   sub: "Security · ML · Networking",    isFloat: false },
-          { n: 2026,  sfx: "",  cls: "c",     lbl: "MSc Start",        sub: "Aalborg Univ. Copenhagen",      isFloat: false },
+          { n: "Founder", sfx: "", cls: "c",  lbl: "Baazar Chawk",     sub: "Afghan Digital Marketplace",    isFloat: false },
         ].map(({ n, sfx, cls, lbl, sub, isFloat }) => (
           <div className="stat" key={lbl}>
             <div className={`stat-n ${cls}`}>
@@ -838,7 +838,7 @@ const Education = () => (
       <FadeIn>
         <div className="sec-lbl">Education</div>
         <h2 className="sec-h">Academic Foundation</h2>
-        <p className="sec-sub">A rigorous Computer Science + Cybersecurity degree from the US, transitioning into European academic and industry circles.</p>
+        <p className="sec-sub">A rigorous Computer Science foundation from Barry University (Summa Cum Laude, GPA 4.0), with an incoming graduate degree in Cybersecurity at Aalborg University Copenhagen.</p>
       </FadeIn>
       <div className="g2">
         <FadeIn delay={0.08}>
@@ -890,6 +890,8 @@ const Experience = () => (
         <div className="tl">
           <div className="tl-line" />
           {[
+            { when:"2025 – Present", type:"Founder & CEO", role:"Founder & CEO", co:"Baazar Chawk — Afghan Digital Marketplace", pts:["Designed full PostgreSQL/Supabase commercial data architecture across 10+ business domains","Built customer segmentation model (retail, wholesale, premium tiers) driving pricing and CLV strategy","Developed live KPI dashboards tracking revenue, retention, ad conversion, and subscriber growth","Deployed WhatsApp AI agent (Chawk Assistant) for automated customer behavior analytics in Dari & English","Led cross-functional agile delivery across engineering, design, and business operations"] },
+            { when:"Sept 2024 – Jan 2025", type:"Finance & Analytics", role:"Co-Managing Analyst", co:"Student Managed Investment Fund (SMIF) — Barry University", pts:["Performed financial and technical valuation for tech-sector equity holdings","Applied ML-based trend analysis to inform buy/hold/sell recommendations to investment committee","Produced executive-level reporting on portfolio performance and sector risk exposure","Collaborated with faculty advisors and peers on data-driven investment thesis development"] },
             { when:"Sept 2025 – Present", type:"Part-Time", role:"AI Center & DX Lab Coordinator", co:"Barry University", pts:["Manage operations of university AI, robotics, and emerging technology labs","Support faculty and students in deploying ML tools and optimizing hardware/software workflows","Lead live demonstrations of ML models and XR systems; onboard new student researchers","Coordinate interdisciplinary project logistics across AI, robotics, and data science teams"] },
             { when:"May – Aug 2024", type:"Remote Internship", role:"Software Engineer Intern", co:"BeStudios", pts:["Built and optimized Java-based backend modules for client-facing production applications","Improved runtime performance and scalability by 25% through architectural refactoring","Collaborated with cross-functional teams in agile sprints to deliver client-ready features","Participated in code reviews, technical design sessions, and requirements analysis"] },
           ].map((item, i) => (
@@ -915,7 +917,7 @@ const Research = () => (
       <FadeIn>
         <div className="sec-lbl">Research</div>
         <h2 className="sec-h">Academic Research</h2>
-        <p className="sec-sub">Undergraduate research accepted at national symposia — methods directly applicable to cybersecurity anomaly detection.</p>
+        <p className="sec-sub">Undergraduate research accepted at national symposia — predictive modeling methodology directly applicable to subscriber churn prediction, revenue forecasting, and business analytics.</p>
       </FadeIn>
       <FadeIn delay={0.1}>
         <div className="res-wrap">
@@ -928,9 +930,9 @@ const Research = () => (
             {[
               "Designed a unified ML framework comparing classical and deep learning models (Ridge, Random Forest, MLP, CNN, LSTM) across multi-asset financial time-series datasets.",
               "Conducted rolling-window and out-of-sample experiments to evaluate model stability under distribution shift in non-stationary environments.",
-              "Found classical models frequently outperformed deep architectures during regime changes — this finding maps directly onto cybersecurity anomaly detection under behavioral drift.",
+              "Found classical models frequently outperformed deep architectures during regime changes — finding directly applicable to customer churn modeling and revenue forecasting under shifting market conditions.",
               "Applied unsupervised learning methods (PCA, NMF, t-SNE) to analyze structural clustering across asset classes.",
-              "Extracted transferable insights for adaptive security systems: the drift-aware evaluation framework applies to network intrusion detection under evolving threat landscapes.",
+              "Extracted transferable insights for BI forecasting systems: the drift-aware evaluation methodology applies to subscriber growth modeling, retention prediction, and revenue trend analysis.",
             ].map(b => <li key={b.slice(0,40)}>{b}</li>)}
           </ul>
           <div className="tags">
@@ -946,12 +948,12 @@ const Research = () => (
       </FadeIn>
       <FadeIn delay={0.18} style={{ marginTop: 24 }}>
         <div style={{ marginTop: 24 }} className="card card-p">
-          <h3 style={{ fontSize: "0.98rem", fontWeight: 800, marginBottom: 8 }}>Next Research Phase: Predictive Cyber Threat Detection</h3>
+          <h3 style={{ fontSize: "0.98rem", fontWeight: 800, marginBottom: 8 }}>Applied Direction: Predictive BI &amp; Revenue Analytics</h3>
           <p style={{ fontSize: "0.875rem", color: "var(--muted)", lineHeight: 1.65, marginBottom: 14 }}>
-            Applying temporal deep learning (CNN-LSTM, Transformers) to network telemetry for proactive intrusion detection, with Bayesian uncertainty quantification and SHAP-based explainability — designed for real-world SOC deployment. Directly aligned with Aalborg MSc research focus.
+            Applying temporal modeling methodology to business intelligence challenges: subscriber churn prediction, customer lifetime value modeling, and revenue trend forecasting. The same drift-aware evaluation pipeline built for financial time-series translates directly into KPI dashboards and executive reporting systems — already being applied at Baazar Chawk.
           </p>
           <div className="tags">
-            {["Intrusion Detection","CNN-LSTM","Transformers","Bayesian Inference","SHAP/LIME","SOC","IoT Security","MLOps"].map(t => <span key={t} className="tag tag-p">{t}</span>)}
+            {["Churn Prediction","CLV Modeling","Revenue Forecasting","KPI Dashboards","Customer Segmentation","Predictive Analytics","Executive Reporting","Data Storytelling"].map(t => <span key={t} className="tag tag-p">{t}</span>)}
           </div>
         </div>
       </FadeIn>
@@ -1037,8 +1039,8 @@ const Skills = () => (
         </FadeIn>
         <FadeIn delay={0.2}>
           <div className="card card-p">
-            <div className="skill-group-title">Cybersecurity</div>
-            {[["Network Analysis / Wireshark",86],["Threat Modeling & RBAC",83],["Cryptography / BCrypt",82],["Computer Forensics (NTFS/MFT)",78],["Packet Inspection / TCP-IP",85]].map(([n,p]) => <SkillBar key={n} name={n} pct={p} color="var(--purple)" />)}
+            <div className="skill-group-title">Business Intelligence &amp; Data</div>
+            {[["SQL · PostgreSQL · Supabase",92],["KPI Dashboard Design",90],["Customer Segmentation & CLV",88],["Revenue & Retention Analytics",87],["Data Storytelling & Executive Reporting",85]].map(([n,p]) => <SkillBar key={n} name={n} pct={p} color="var(--purple)" />)}
           </div>
         </FadeIn>
         <FadeIn delay={0.26}>
@@ -1046,9 +1048,13 @@ const Skills = () => (
             <div className="skill-group-title">Mathematics</div>
             {[["Probability & Statistics",90],["Linear Algebra",88],["Discrete Mathematics",92],["Calculus",80]].map(([n,p]) => <SkillBar key={n} name={n} pct={p} color="var(--gold)" />)}
             <div style={{ marginTop: 20 }}>
+              <div className="skill-group-title" style={{ marginBottom: 12 }}>Languages</div>
+              <div className="tags" style={{ marginBottom: 14 }}>
+                {[["Dari","g"],["English","g"],["Pashto","c"]].map(([t,v]) => <span key={t} className={`tag tag-${v}`}>{t} {t==="Dari"?"(Native)":t==="English"?"(Fluent)":"(Conversational)"}</span>)}
+              </div>
               <div className="skill-group-title" style={{ marginBottom: 12 }}>Tools &amp; Platforms</div>
               <div className="tags">
-                {["Git/GitHub","Linux","Eclipse IDE","VS Code","Jupyter","Apache Tomcat","Microsoft Azure","React.js","Vite","Framer Motion"].map(t => <span key={t} className="tag tag-c">{t}</span>)}
+                {["Git/GitHub","Linux","VS Code","Jupyter","Microsoft Azure","React.js","WhatsApp Business API","Supabase","PostgreSQL","Tableau / Power BI"].map(t => <span key={t} className="tag tag-c">{t}</span>)}
               </div>
             </div>
           </div>
@@ -1247,7 +1253,7 @@ const Contact = () => (
             ))}
           </div>
           <div style={{ fontSize:"0.78rem", color:"var(--muted)", marginBottom:32 }}>
-            📍 Miami, FL → Copenhagen, Denmark (Sept 2026) &nbsp;·&nbsp; 📞 +1 (786) 210-7596
+            📍 Miami, FL, USA &nbsp;·&nbsp; Open to Kabul, Afghanistan &amp; MENA Region &nbsp;·&nbsp; 📞 +1 (786) 210-7596
           </div>
           <div style={{ fontSize:"0.68rem", fontWeight:800, color:"var(--muted)", fontFamily:"'JetBrains Mono',monospace", textTransform:"uppercase", letterSpacing:"0.15em", marginBottom:14 }}>
             // Documents
@@ -1291,7 +1297,7 @@ export default function App() {
         <div className="w">
           <div className="footer-brand">aftab@portfolio ~ cybersecurity &amp; AI</div>
           <div className="footer-copy">
-            © {new Date().getFullYear()} Aftab Alam Masjidi · Barry University Alumnus (Summa Cum Laude) · Incoming M.Sc. Cybersecurity, Aalborg University Copenhagen
+            © {new Date().getFullYear()} Aftab Alam Masjidi · B.S. Computer Science, Summa Cum Laude, Barry University · Founder, Baazar Chawk
           </div>
           <div style={{ marginTop:10, fontSize:"0.7rem", color:"rgba(90,122,150,0.45)", fontFamily:"'JetBrains Mono',monospace" }}>
             aftabalam.masjidi@mymail.barry.edu · linkedin.com/in/aftabalammasjidi · github.com/aftabalam01-creator
