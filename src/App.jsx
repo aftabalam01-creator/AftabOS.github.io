@@ -655,11 +655,11 @@ const Terminal = () => {
     { t: "kv",  k: '"honors"',       v: '"Summa Cum Laude"' },
     { t: "kv",  k: '"gpa"',          v: '4.0' },
     { t: "kv",  k: '"scholarship"',  v: '"Stamps Scholar (top 0.5%)"' },
-    { t: "kv",  k: '"next"',         v: '"M.Sc. Cybersecurity @ Aalborg Univ. Copenhagen"' },
-    { t: "kv",  k: '"available"',    v: '"European cybersecurity roles — Sept 2026"' },
+    { t: "kv",  k: '"thesis"',        v: '"Predictive Cybersecurity & AI-Driven Threat Detection"' },
+    { t: "kv",  k: '"seeking"',      v: '"funded thesis-based M.Sc. or Ph.D. — Fall 2026"' },
     { t: "out", v: '}' },
-    { t: "cmd", v: "ping recruiter --status" },
-    { t: "ok",  v: "[✓ OPEN TO HIRE]  Denmark · Scandinavia · EU · Remote" },
+    { t: "cmd", v: "ping supervisor --status" },
+    { t: "ok",  v: "[✓ OPEN TO SUPERVISION]  UofT · UWaterloo · UBC · McGill · Carleton · SFU" },
   ];
   const [vis, setVis] = useState(0);
   useEffect(() => {
@@ -756,7 +756,7 @@ const Hero = () => {
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1 }}>
           <div className="hero-badge">
             <span className="badge-dot" />
-            AVAILABLE — Cybersecurity Roles in Europe · Student Assistantships &amp; Full-Time
+            SEEKING RESEARCH SUPERVISION · Thesis-Based M.Sc. / Ph.D. · Cybersecurity &amp; AI · Canada
           </div>
         </motion.div>
 
@@ -777,17 +777,15 @@ const Hero = () => {
               <span>Graduated May 2026</span>
             </div>
             <div className="hero-edu-row">
-              <strong>M.Sc. Cybersecurity</strong>
+              <strong>Research Interests</strong>
               <span className="sep">|</span>
-              <span>Aalborg University Copenhagen, Denmark</span>
-              <span className="sep">|</span>
-              <span className="hl2">Incoming · 2026 – 2028</span>
+              <span>Predictive Threat Detection · Anomaly Detection · Explainable AI</span>
             </div>
           </div>
           <div className="hero-location">
             <span>📍 Miami, FL, USA</span>
             <span className="arrow">——→</span>
-            <span>Copenhagen, Denmark (Sept 2026)</span>
+            <span>Canadian Graduate Programs · Fall 2026</span>
           </div>
         </motion.div>
 
@@ -817,7 +815,7 @@ const StatsBar = () => (
           { n: 5,     sfx: "×", cls: "c",     lbl: "President's List", sub: "Consecutive Semesters",         isFloat: false },
           { n: 0.5,   sfx: "%", cls: "g",     lbl: "Stamps Scholar",   sub: "Top 0.5% — Full-Ride Merit",    isFloat: true  },
           { n: 3,     sfx: "",  cls: "p",     lbl: "Major Projects",   sub: "Security · ML · Networking",    isFloat: false },
-          { n: 2026,  sfx: "",  cls: "c",     lbl: "MSc Start",        sub: "Aalborg Univ. Copenhagen",      isFloat: false },
+          { n: "Fall 2026", sfx: "", cls: "c", lbl: "Target Intake",   sub: "Canadian Thesis Program",       isFloat: false },
         ].map(({ n, sfx, cls, lbl, sub, isFloat }) => (
           <div className="stat" key={lbl}>
             <div className={`stat-n ${cls}`}>
@@ -838,20 +836,26 @@ const Education = () => (
       <FadeIn>
         <div className="sec-lbl">Education</div>
         <h2 className="sec-h">Academic Foundation</h2>
-        <p className="sec-sub">A rigorous Computer Science + Cybersecurity degree from the US, transitioning into European academic and industry circles.</p>
+        <p className="sec-sub">Perfect 4.0 GPA, Summa Cum Laude undergraduate foundation in Computer Science and Cybersecurity — research-ready and seeking thesis-based graduate supervision in Canada.</p>
       </FadeIn>
       <div className="g2">
         <FadeIn delay={0.08}>
           <div className="edu-card edu-card-a">
             <div className="edu-status edu-st-a">
               <span style={{ width:7, height:7, borderRadius:"50%", background:"var(--cyan)", display:"inline-block", boxShadow:"0 0 8px var(--cyan)", animation:"badge-pulse 2s ease-in-out infinite" }} />
-              Incoming · September 2026
+              Seeking Supervision · Fall 2026
             </div>
-            <div className="edu-inst">Aalborg University Copenhagen</div>
-            <div className="edu-deg">M.Sc. Cybersecurity</div>
-            <div className="edu-meta"><span>📍 Copenhagen, Denmark</span><span>🗓 2026 – 2028</span></div>
+            <div className="edu-inst">Proposed Research Direction</div>
+            <div className="edu-deg">Thesis-Based M.Sc. or Ph.D. · Cybersecurity &amp; AI</div>
+            <div className="edu-meta"><span>📍 Canada</span><span>🗓 Target: Fall 2026</span><span style={{color:"var(--green)",fontWeight:700}}>Funding: RA / TA / NSERC</span></div>
             <ul className="edu-list">
-              {["Research-intensive program aligned with EU cybersecurity frameworks and GDPR","Focus: Network Security, Cryptography, AI-driven Threat Detection","Strong industry ties across Scandinavia — gateway to European tech sector","Pursuing student assistant (studentermedhjælper) roles during studies"].map(h => <li key={h}>{h}</li>)}
+              {[
+                "Thesis focus: Predictive threat detection using temporal deep learning on network telemetry (CNN-LSTM, Transformers)",
+                "Bayesian uncertainty quantification to reduce false positives in intrusion detection systems",
+                "Explainable AI (SHAP/LIME) for analyst-interpretable security decision pipelines",
+                "Applications: adaptive IDS, SOC automation, IoT security under behavioral drift",
+                "Target labs: CrySP (Waterloo) · S&P Group (UofT) · SecureNet (UBC) · Carleton SCS · McGill",
+              ].map(h => <li key={h}>{h}</li>)}
             </ul>
           </div>
         </FadeIn>
@@ -948,7 +952,7 @@ const Research = () => (
         <div style={{ marginTop: 24 }} className="card card-p">
           <h3 style={{ fontSize: "0.98rem", fontWeight: 800, marginBottom: 8 }}>Next Research Phase: Predictive Cyber Threat Detection</h3>
           <p style={{ fontSize: "0.875rem", color: "var(--muted)", lineHeight: 1.65, marginBottom: 14 }}>
-            Applying temporal deep learning (CNN-LSTM, Transformers) to network telemetry for proactive intrusion detection, with Bayesian uncertainty quantification and SHAP-based explainability — designed for real-world SOC deployment. Directly aligned with Aalborg MSc research focus.
+            Applying temporal deep learning (CNN-LSTM, Transformers) to network telemetry for proactive intrusion detection, with Bayesian uncertainty quantification and SHAP-based explainability — designed for real-world SOC deployment. This is my proposed thesis direction for Canadian graduate programs.
           </p>
           <div className="tags">
             {["Intrusion Detection","CNN-LSTM","Transformers","Bayesian Inference","SHAP/LIME","SOC","IoT Security","MLOps"].map(t => <span key={t} className="tag tag-p">{t}</span>)}
@@ -1230,9 +1234,9 @@ const Contact = () => (
       <FadeIn>
         <div className="cta-box">
           <div className="sec-lbl" style={{ justifyContent:"center", marginBottom:12 }}>Contact</div>
-          <h2>Let's Build Something Secure</h2>
+          <h2>Open to Research Supervision</h2>
           <p>
-            Actively seeking cybersecurity roles in Europe — student assistantships at universities and full-time positions at security, tech, or research organizations. Relocating to Copenhagen for my MSc in September 2026. Open to remote and hybrid roles across the EU.
+            I am actively seeking thesis-based M.Sc. and Ph.D. supervisors at Canadian universities working in Cybersecurity, AI, or Network Security. If your lab focuses on intrusion detection, anomaly detection, explainable AI, or adaptive defense systems — I would welcome a conversation. I bring a 4.0 GPA, published undergraduate research, and a clear thesis direction.
           </p>
           <div className="cta-links">
             {[
@@ -1247,7 +1251,7 @@ const Contact = () => (
             ))}
           </div>
           <div style={{ fontSize:"0.78rem", color:"var(--muted)", marginBottom:32 }}>
-            📍 Miami, FL → Copenhagen, Denmark (Sept 2026) &nbsp;·&nbsp; 📞 +1 (786) 210-7596
+            📍 Miami, FL, USA &nbsp;·&nbsp; Open to relocate anywhere in Canada for the right program &nbsp;·&nbsp; 📞 +1 (786) 210-7596
           </div>
           <div style={{ fontSize:"0.68rem", fontWeight:800, color:"var(--muted)", fontFamily:"'JetBrains Mono',monospace", textTransform:"uppercase", letterSpacing:"0.15em", marginBottom:14 }}>
             // Documents
@@ -1291,7 +1295,7 @@ export default function App() {
         <div className="w">
           <div className="footer-brand">aftab@portfolio ~ cybersecurity &amp; AI</div>
           <div className="footer-copy">
-            © {new Date().getFullYear()} Aftab Alam Masjidi · Barry University Alumnus (Summa Cum Laude) · Incoming M.Sc. Cybersecurity, Aalborg University Copenhagen
+            © {new Date().getFullYear()} Aftab Alam Masjidi · B.S. Computer Science, Summa Cum Laude, Barry University · Seeking Thesis-Based Graduate Supervision in Canada
           </div>
           <div style={{ marginTop:10, fontSize:"0.7rem", color:"rgba(90,122,150,0.45)", fontFamily:"'JetBrains Mono',monospace" }}>
             aftabalam.masjidi@mymail.barry.edu · linkedin.com/in/aftabalammasjidi · github.com/aftabalam01-creator
