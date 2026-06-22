@@ -7,7 +7,7 @@
   <meta name="description" content="AftabOS builds enterprise ERP systems, AI-powered platforms, and multilingual digital marketplaces for Afghan businesses — engineered in Miami, deployed in Kabul." />
   <meta name="keywords" content="Afghanistan software company, ERP Afghanistan, digital marketplace Afghanistan, Kabul web development, Silk Road ERP, Baazar Chawk, Afghan tech company, Miami software company" />
   <meta name="author" content="AftabOS" />
-  <meta name="theme-color" content="#0A0C10" />
+  <meta name="theme-color" content="#F7F7F5" />
   <meta property="og:title" content="AftabOS — Digital Infrastructure for Afghanistan" />
   <meta property="og:description" content="Enterprise ERP systems, AI-powered platforms, and multilingual marketplaces — engineered for Afghan businesses, built to global standards." />
   <meta property="og:type" content="website" />
@@ -15,41 +15,44 @@
   <link rel="icon" type="image/png" href="/files/AftabLogo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<!-- ── OVERLAY ── -->
+<!-- Custom cursor (hidden on touch/mobile via CSS) -->
+<div id="cursor" aria-hidden="true"></div>
+
+<!-- Overlay for mobile menu -->
 <div class="menu-overlay" id="menu-overlay" aria-hidden="true"></div>
 
-<!-- ── NAV ── -->
+<!-- ══ NAV ══ -->
 <nav id="nav" role="navigation" aria-label="Main navigation">
   <div class="container">
     <div class="nav-inner">
       <a href="#hero" class="logo" aria-label="AftabOS Home">
-        <span class="logo-diamond" aria-hidden="true"></span>Aftab<span style="color:var(--accent)">OS</span>
+        <span class="logo-diamond" aria-hidden="true"></span>Aftab<span class="logo-os">OS</span>
       </a>
 
       <ul class="nav-links" role="list">
         <li><a href="#services" data-t="navServices">Services</a></li>
-        <li><a href="#work" data-t="navWork">Our Work</a></li>
-        <li><a href="#why" data-t="navAbout">About</a></li>
-        <li><a href="#contact" data-t="navContact">Contact</a></li>
+        <li><a href="#work"     data-t="navWork">Our Work</a></li>
+        <li><a href="#why"      data-t="navAbout">About</a></li>
+        <li><a href="#contact"  data-t="navContact">Contact</a></li>
       </ul>
 
       <div class="nav-right">
         <div class="lang-switcher" role="navigation" aria-label="Language selector">
-          <button class="lang-btn" data-lang-toggle aria-haspopup="listbox" aria-expanded="false" id="lang-btn-text-wrap">
-            <span id="lang-btn-text">🇺🇸 EN</span>
+          <button class="lang-btn" data-lang-toggle aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-display">🇺🇸 EN</span>
             <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
           <div class="lang-dropdown" role="listbox" aria-label="Select language">
-            <button class="lang-option active" data-lang="en" role="option">🇺🇸 English</button>
-            <button class="lang-option" data-lang="fa" role="option">🇦🇫 دری</button>
-            <button class="lang-option" data-lang="ps" role="option">🇦🇫 پښتو</button>
-            <button class="lang-option" data-lang="zh" role="option">🇨🇳 中文</button>
-            <button class="lang-option" data-lang="ar" role="option">🇸🇦 العربية</button>
+            <button class="lang-option active" data-lang="en">🇺🇸 English</button>
+            <button class="lang-option" data-lang="fa">🇦🇫 دری</button>
+            <button class="lang-option" data-lang="ps">🇦🇫 پښتو</button>
+            <button class="lang-option" data-lang="zh">🇨🇳 中文</button>
+            <button class="lang-option" data-lang="ar">🇸🇦 العربية</button>
           </div>
         </div>
         <a href="#contact" class="btn btn-primary" data-t="navCta">Contact Us</a>
@@ -62,38 +65,40 @@
   </div>
 </nav>
 
-<!-- ── MOBILE MENU ── -->
+<!-- ══ MOBILE FULL-SCREEN MENU ══ -->
 <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-modal="true">
-  <a href="#services" data-t="navServices">Services</a>
-  <a href="#work" data-t="navWork">Our Work</a>
-  <a href="#why" data-t="navAbout">About</a>
-  <a href="#contact" data-t="navContact">Contact</a>
-  <a href="#contact" class="btn btn-primary" data-t="navCta">Contact Us</a>
-  <div class="lang-opts">
-    <p class="eyebrow" data-t="footerLang" style="margin-bottom:0.5rem">Language</p>
-    <button class="lang-option active" data-lang="en">🇺🇸 English</button>
-    <button class="lang-option" data-lang="fa">🇦🇫 دری</button>
-    <button class="lang-option" data-lang="ps">🇦🇫 پښتو</button>
-    <button class="lang-option" data-lang="zh">🇨🇳 中文</button>
-    <button class="lang-option" data-lang="ar">🇸🇦 العربية</button>
+  <a href="#services" class="mob-link" data-t="navServices">Services</a>
+  <a href="#work"     class="mob-link" data-t="navWork">Our Work</a>
+  <a href="#why"      class="mob-link" data-t="navAbout">About</a>
+  <a href="#contact"  class="mob-link" data-t="navContact">Contact</a>
+  <a href="#contact"  class="btn btn-primary mob-cta" data-t="navCta">Contact Us</a>
+  <div class="mob-lang">
+    <div class="mob-lang-label" data-t="footerLang">Language</div>
+    <div class="mob-lang-opts">
+      <button class="lang-option active" data-lang="en">🇺🇸 English</button>
+      <button class="lang-option" data-lang="fa">🇦🇫 دری</button>
+      <button class="lang-option" data-lang="ps">🇦🇫 پښتو</button>
+      <button class="lang-option" data-lang="zh">🇨🇳 中文</button>
+      <button class="lang-option" data-lang="ar">🇸🇦 العربية</button>
+    </div>
   </div>
 </div>
 
 <main>
 
-<!-- ── HERO ── -->
+<!-- ══ HERO ══ -->
 <section id="hero" aria-labelledby="hero-heading">
   <canvas id="hero-canvas" aria-hidden="true"></canvas>
   <div class="container">
     <div class="hero-content">
-      <span class="eyebrow" aria-hidden="true">AftabOS · Miami &amp; Kabul</span>
-      <h1 id="hero-heading" data-t="heroHeadline">We Build the Digital Infrastructure of Afghanistan</h1>
-      <p class="hero-sub" data-t="heroSub">Enterprise ERP systems, AI-powered platforms, and multilingual marketplaces — engineered for Afghan businesses, built to global standards.</p>
-      <div class="hero-ctas">
-        <a href="#work" class="btn btn-primary" data-t="heroCta1">Explore Our Work</a>
-        <a href="#contact" class="btn btn-ghost" data-t="heroCta2">Get in Touch</a>
+      <span class="eyebrow fade-up">AftabOS &middot; Miami &amp; Kabul</span>
+      <h1 id="hero-heading" class="fade-up" data-t="heroHeadline">We Build the Digital Infrastructure of Afghanistan</h1>
+      <p class="hero-sub fade-up" data-t="heroSub">Enterprise ERP systems, AI-powered platforms, and multilingual marketplaces — engineered for Afghan businesses, built to global standards.</p>
+      <div class="hero-ctas fade-up">
+        <a href="#work"    class="btn btn-primary" data-magnetic data-t="heroCta1">Explore Our Work</a>
+        <a href="#contact" class="btn btn-ghost"   data-magnetic data-t="heroCta2">Get in Touch</a>
       </div>
-      <div class="hero-trust" role="contentinfo">
+      <div class="hero-trust fade-up">
         <span data-t="heroTrust">Miami, Florida, USA</span>
         <span class="trust-dot" aria-hidden="true"></span>
         <span data-t="heroTrust2">Kabul, Afghanistan</span>
@@ -107,7 +112,7 @@
   </div>
 </section>
 
-<!-- ── SERVICES ── -->
+<!-- ══ SERVICES ══ -->
 <section id="services" aria-labelledby="services-heading">
   <div class="container">
     <span class="eyebrow fade-up" data-t="servicesEyebrow">Our Services</span>
@@ -116,33 +121,28 @@
     <div class="section-divider fade-up" aria-hidden="true"></div>
 
     <div class="services-grid">
-      <!-- ERP -->
       <article class="service-card fade-up">
         <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <rect x="4" y="8" width="36" height="28" rx="3"/>
-          <path d="M4 15h36"/>
-          <path d="M14 22h16M14 28h10"/>
-          <circle cx="33" cy="28" r="4" fill="none"/>
+          <path d="M4 15h36M14 22h16M14 28h10"/>
+          <circle cx="33" cy="28" r="4"/>
           <path d="M36.5 31.5l2.5 2.5"/>
         </svg>
         <h3 data-t="s1title">ERP &amp; Logistics Systems</h3>
         <p data-t="s1desc">Custom enterprise resource planning systems for freight, cargo, and logistics operations. We build the software backbone that runs cross-border trade routes.</p>
       </article>
 
-      <!-- Marketplace -->
       <article class="service-card fade-up">
         <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <path d="M6 8h32l-3 12H9L6 8z"/>
           <circle cx="16" cy="36" r="2.5"/>
           <circle cx="28" cy="36" r="2.5"/>
-          <path d="M9 20l2 10h22l2-10"/>
-          <path d="M22 8v12"/>
+          <path d="M9 20l2 10h22l2-10M22 8v12"/>
         </svg>
         <h3 data-t="s2title">Digital Marketplaces</h3>
         <p data-t="s2desc">Full-stack multilingual e-commerce platforms that connect buyers and sellers in the Afghan market. Built for scale, built for real users.</p>
       </article>
 
-      <!-- Web Apps -->
       <article class="service-card fade-up">
         <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <rect x="4" y="6" width="36" height="28" rx="3"/>
@@ -156,7 +156,6 @@
         <p data-t="s3desc">High-performance professional websites and web applications for Afghan restaurants, businesses, and service companies — designed to convert.</p>
       </article>
 
-      <!-- AI -->
       <article class="service-card fade-up">
         <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <circle cx="22" cy="22" r="10"/>
@@ -168,7 +167,6 @@
         <p data-t="s4desc">Intelligent automation and AI-driven assistants that help Afghan businesses operate smarter — from WhatsApp knowledge agents to process automation.</p>
       </article>
 
-      <!-- Cybersecurity -->
       <article class="service-card fade-up">
         <svg class="service-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
           <path d="M22 4L6 11v11c0 10 7 18 16 20 9-2 16-10 16-20V11L22 4z"/>
@@ -181,7 +179,7 @@
   </div>
 </section>
 
-<!-- ── WORK ── -->
+<!-- ══ WORK ══ -->
 <section id="work" aria-labelledby="work-heading">
   <div class="container">
     <span class="eyebrow fade-up" data-t="workEyebrow">Featured Work</span>
@@ -190,7 +188,6 @@
     <div class="section-divider fade-up" aria-hidden="true"></div>
 
     <div class="projects-list">
-      <!-- Silk Road ERP -->
       <article class="project-card fade-up">
         <div>
           <h3 data-t="p1name">Silk Road Overland ERP</h3>
@@ -208,7 +205,6 @@
         </div>
       </article>
 
-      <!-- Baazar Chawk -->
       <article class="project-card fade-up">
         <div>
           <h3 data-t="p2name">Baazar Chawk</h3>
@@ -228,7 +224,6 @@
         </div>
       </article>
 
-      <!-- AFIYAT -->
       <article class="project-card fade-up">
         <div>
           <h3 data-t="p3name">AFIYAT Restaurant</h3>
@@ -248,7 +243,7 @@
   </div>
 </section>
 
-<!-- ── WHY AFTABOS ── -->
+<!-- ══ WHY AFTABOS ══ -->
 <section id="why" aria-labelledby="why-heading">
   <div class="container">
     <span class="eyebrow fade-up" data-t="whyEyebrow">Why Choose Us</span>
@@ -258,23 +253,22 @@
 
     <div class="why-features">
       <div class="why-card fade-up">
-        <div class="why-number" data-t="w1num" aria-hidden="true">01</div>
+        <div class="why-number" data-count="1" aria-label="01">01</div>
         <h3 data-t="w1title">American-Trained Engineering</h3>
         <p data-t="w1desc">Founded and led by a U.S.-educated computer scientist, Honors, Summa Cum Laude, Barry University, Miami — trained to the standard of Silicon Valley, building for Afghanistan.</p>
       </div>
       <div class="why-card fade-up">
-        <div class="why-number" data-t="w2num" aria-hidden="true">02</div>
+        <div class="why-number" data-count="2" aria-label="02">02</div>
         <h3 data-t="w2title">Afghan-First</h3>
         <p data-t="w2desc">Every product is designed for Afghan users, Afghan languages, and Afghan business realities. We understand this market from the inside.</p>
       </div>
       <div class="why-card fade-up">
-        <div class="why-number" data-t="w3num" aria-hidden="true">03</div>
+        <div class="why-number" data-count="3" aria-label="03">03</div>
         <h3 data-t="w3title">End-to-End Delivery</h3>
         <p data-t="w3desc">From system architecture and security audit to deployment and long-term support — we own the full lifecycle of every product we build.</p>
       </div>
     </div>
 
-    <!-- Founder -->
     <div class="founder-block fade-up">
       <div class="founder-label">
         <span class="eyebrow" data-t="founderLabel">About Our Founder</span>
@@ -287,7 +281,7 @@
   </div>
 </section>
 
-<!-- ── TESTIMONIALS ── -->
+<!-- ══ TESTIMONIALS ══ -->
 <section id="testimonials" aria-labelledby="test-heading">
   <div class="container">
     <span class="eyebrow fade-up" data-t="testEyebrow">What Our Clients Say</span>
@@ -298,7 +292,7 @@
     <div class="testimonials-grid">
       <article class="testimonial-card fade-up">
         <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-        <p class="testimonial-text" data-t="t1quote">"We had tried other local developers before AftabOS. The difference was immediately clear — this was not a small freelance job. Aftab and his team delivered a system that actually handles our China shipments end to end. Professional from day one."</p>
+        <p class="testimonial-text" data-t="t1quote">We had tried other local developers before AftabOS. The difference was immediately clear — this was not a small freelance job. Aftab and his team delivered a system that actually handles our China shipments end to end. Professional from day one.</p>
         <div class="stars" aria-label="5 stars">
           <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
           <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -314,7 +308,7 @@
 
       <article class="testimonial-card fade-up">
         <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-        <p class="testimonial-text" data-t="t2quote">"I was skeptical that an online platform could work for our saray business. Baazar Chawk changed my mind completely. My customers now browse and order without coming to the market every time. It is built in Dari, it works on any phone, and the support has been excellent."</p>
+        <p class="testimonial-text" data-t="t2quote">I was skeptical that an online platform could work for our saray business. Baazar Chawk changed my mind completely. My customers now browse and order without coming to the market every time. It is built in Dari, it works on any phone, and the support has been excellent.</p>
         <div class="stars" aria-label="5 stars">
           <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
           <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -330,7 +324,7 @@
 
       <article class="testimonial-card fade-up">
         <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-        <p class="testimonial-text" data-t="t3quote">"We wanted a website that matched the quality of our restaurant — something that felt world-class. AftabOS delivered exactly that. Our guests comment on the website before they even arrive. It is elegant, fast, and nothing like anything else in Kabul."</p>
+        <p class="testimonial-text" data-t="t3quote">We wanted a website that matched the quality of our restaurant — something that felt world-class. AftabOS delivered exactly that. Our guests comment on the website before they even arrive. It is elegant, fast, and nothing like anything else in Kabul.</p>
         <div class="stars" aria-label="5 stars">
           <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
           <svg class="star" viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>
@@ -347,15 +341,14 @@
   </div>
 </section>
 
-<!-- ── CONTACT ── -->
+<!-- ══ CONTACT ══ -->
 <section id="contact" aria-labelledby="contact-heading">
   <div class="container">
     <div class="contact-grid">
-      <!-- Form side -->
       <div class="contact-form-wrap">
         <span class="eyebrow fade-up" data-t="contactEyebrow">Work With Us</span>
         <h2 id="contact-heading" class="fade-up" data-t="contactHeading">Ready to build something exceptional?</h2>
-        <p class="form-sub fade-up" data-t="contactSub">Whether you need an ERP system, a digital marketplace, or a world-class business website — let's talk. We work with clients across Afghanistan, the region, and internationally.</p>
+        <p class="form-sub fade-up" data-t="contactSub">Whether you need an ERP system, a digital marketplace, or a world-class business website — let's talk.</p>
 
         <div id="form-success" class="form-success" role="alert" aria-live="polite">
           <h3 data-t="fSuccessTitle">Message Received</h3>
@@ -375,7 +368,6 @@
               <span class="field-error" id="f-company-err" role="alert"></span>
             </div>
           </div>
-
           <div class="form-row">
             <div class="form-group">
               <label for="f-email" data-t="fEmailLabel">Email Address</label>
@@ -387,7 +379,6 @@
               <input type="tel" id="f-phone" name="phone" autocomplete="tel" data-tp="fPhonePlaceholder" placeholder="+93 or international" />
             </div>
           </div>
-
           <div class="form-group">
             <label for="f-service" data-t="fServiceLabel">Service Interested In</label>
             <select id="f-service" name="service" required
@@ -402,38 +393,29 @@
             </select>
             <span class="field-error" id="f-service-err" role="alert"></span>
           </div>
-
           <div class="form-group">
             <label for="f-message" data-t="fMessageLabel">Tell us what you're building</label>
             <textarea id="f-message" name="message" data-tp="fMessagePlaceholder" placeholder="Describe your project, timeline, and any specific requirements..." required></textarea>
             <span class="field-error" id="f-message-err" role="alert"></span>
           </div>
-
           <button type="submit" class="btn btn-primary form-submit" data-t="fSubmit">Send Message</button>
         </form>
       </div>
 
-      <!-- Contact info side -->
       <div class="contact-info fade-up">
         <h3 data-t="contactInfoTitle">Get in Touch Directly</h3>
         <div class="contact-items">
           <div>
             <div class="contact-item-label" data-t="labelEmail">Email</div>
-            <div class="contact-item-value">
-              <a href="mailto:aftabalammasjidi@gmail.com">aftabalammasjidi@gmail.com</a>
-            </div>
+            <div class="contact-item-value"><a href="mailto:aftabalammasjidi@gmail.com">aftabalammasjidi@gmail.com</a></div>
           </div>
           <div>
             <div class="contact-item-label" data-t="labelPhone">Phone</div>
-            <div class="contact-item-value">
-              <a href="tel:+17862107596">+1 786 210 7596</a>
-            </div>
+            <div class="contact-item-value"><a href="tel:+17862107596">+1 786 210 7596</a></div>
           </div>
           <div>
             <div class="contact-item-label" data-t="labelWhatsApp">WhatsApp</div>
-            <div class="contact-item-value">
-              <a href="https://wa.me/93770696076" target="_blank" rel="noopener noreferrer">+93 770 696 076</a>
-            </div>
+            <div class="contact-item-value"><a href="https://wa.me/93770696076" target="_blank" rel="noopener noreferrer">+93 770 696 076</a></div>
             <div class="contact-note" data-t="waNote">Message us on WhatsApp — please mention AftabOS.com in your first message</div>
           </div>
           <div>
@@ -455,13 +437,13 @@
 
 </main>
 
-<!-- ── FOOTER ── -->
+<!-- ══ FOOTER (dark) ══ -->
 <footer role="contentinfo">
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
         <a href="#hero" class="logo" aria-label="AftabOS">
-          <span class="logo-diamond" aria-hidden="true"></span>Aftab<span style="color:var(--accent)">OS</span>
+          <span class="logo-diamond" aria-hidden="true"></span>Aftab<span class="logo-os">OS</span>
         </a>
         <p class="footer-tagline" data-t="footerTagline">Engineering Afghanistan's Digital Future — from Miami to Kabul.</p>
       </div>
@@ -470,9 +452,9 @@
         <div class="footer-nav-title" data-t="footerNav">Navigation</div>
         <ul class="footer-links" role="list">
           <li><a href="#services" data-t="navServices">Services</a></li>
-          <li><a href="#work" data-t="navWork">Our Work</a></li>
-          <li><a href="#why" data-t="navAbout">About</a></li>
-          <li><a href="#contact" data-t="navContact">Contact</a></li>
+          <li><a href="#work"     data-t="navWork">Our Work</a></li>
+          <li><a href="#why"      data-t="navAbout">About</a></li>
+          <li><a href="#contact"  data-t="navContact">Contact</a></li>
         </ul>
       </div>
 
@@ -482,20 +464,17 @@
           <div class="footer-loc"><span class="loc-dot" aria-hidden="true"></span>Miami, Florida, USA</div>
           <div class="footer-loc"><span class="loc-dot" aria-hidden="true"></span>Kabul, Afghanistan</div>
         </div>
-        <div style="margin-top:1.5rem">
-          <div class="footer-nav-title" data-t="footerLang">Language</div>
-          <div class="lang-switcher" style="display:inline-block">
-            <button class="lang-btn" data-lang-toggle aria-haspopup="listbox">
-              <span class="lang-btn-footer">🇺🇸 EN</span>
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="lang-dropdown" role="listbox">
-              <button class="lang-option active" data-lang="en">🇺🇸 English</button>
-              <button class="lang-option" data-lang="fa">🇦🇫 دری</button>
-              <button class="lang-option" data-lang="ps">🇦🇫 پښتو</button>
-              <button class="lang-option" data-lang="zh">🇨🇳 中文</button>
-              <button class="lang-option" data-lang="ar">🇸🇦 العربية</button>
-            </div>
+        <div class="lang-switcher" style="margin-top:1.5rem">
+          <button class="lang-btn" data-lang-toggle aria-haspopup="listbox">
+            <span class="lang-display">🇺🇸 EN</span>
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="lang-dropdown" role="listbox">
+            <button class="lang-option active" data-lang="en">🇺🇸 English</button>
+            <button class="lang-option" data-lang="fa">🇦🇫 دری</button>
+            <button class="lang-option" data-lang="ps">🇦🇫 پښتو</button>
+            <button class="lang-option" data-lang="zh">🇨🇳 中文</button>
+            <button class="lang-option" data-lang="ar">🇸🇦 العربية</button>
           </div>
         </div>
       </div>
