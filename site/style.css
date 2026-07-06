@@ -1076,6 +1076,13 @@ footer .lang-option.active { color: var(--accent); }
   .wa-cta-block { padding: 2rem 1.5rem; }
   .wa-cta-inner { flex-direction: column; align-items: flex-start; }
   .btn-wa { width: 100%; justify-content: center; }
+  #hero {
+    min-height: auto;
+    align-items: flex-start;
+    padding-top: calc(var(--nav-h) + 2.5rem);
+    padding-bottom: 3.5rem;
+  }
+  .scroll-indicator { display: none; }
 }
 
 @media (max-width: 480px) {
