@@ -61,7 +61,7 @@ const T = {
     waCtaSub:'A direct message is faster than a form — most inquiries are answered the same day. Send us a message in Dari, Pashto, or English.',
     waCtaBtn:'Message us on WhatsApp', orContact:'or send an email enquiry below',
     footerTagline:"Engineering Afghanistan's Digital Future — from Miami to Kabul.",
-    footerNav:'Navigation', footerLocations:'Locations', footerCopy:'© 2025 AftabOS. All rights reserved.', footerLang:'Language',
+    footerNav:'Navigation', footerLocations:'Locations', footerCopy:'© 2026 AftabOS. All rights reserved.', footerLang:'Language',
   },
 
   fa: {
@@ -121,7 +121,7 @@ const T = {
     waCtaSub:'یک پیام مستقیم از یک فرم سریع‌تر است — اکثر پرسش‌ها همان روز پاسخ داده می‌شوند. به دری، پشتو یا انگلیسی پیام بدهید.',
     waCtaBtn:'پیام در واتساپ', orContact:'یا از طریق فرم ایمیل زیر ارسال کنید',
     footerTagline:'آینده دیجیتال افغانستان را از میامی تا کابل مهندسی می‌کنیم.',
-    footerNav:'ناوبری', footerLocations:'مکان‌ها', footerCopy:'© ۲۰۲۵ افتاب‌اُس. تمام حقوق محفوظ است.', footerLang:'زبان',
+    footerNav:'ناوبری', footerLocations:'مکان‌ها', footerCopy:'© ۲۰۲۶ افتاب‌اُس. تمام حقوق محفوظ است.', footerLang:'زبان',
   },
 
   ps: {
@@ -181,7 +181,7 @@ const T = {
     waCtaSub:'یو مستقیم پیغام د فارم نه چټک دی — ډیری پوښتنې ورته ورځ ځواب کیږي. دري، پښتو، یا انګلیسي کې پیغام واستوئ.',
     waCtaBtn:'واټساپ کې پیغام واستوئ', orContact:'یا لاندې د ایمیل له لارې پوښتنه واستوئ',
     footerTagline:'د افغانستان ډیجیټل راتلونکی د میامي نه کابل ته انجینیري کوو.',
-    footerNav:'ناوبري', footerLocations:'ځایونه', footerCopy:'© ۲۰۲۵ افتاب‌اُس. ټول حقونه خوندي دي.', footerLang:'ژبه',
+    footerNav:'ناوبري', footerLocations:'ځایونه', footerCopy:'© ۲۰۲۶ افتاب‌اُس. ټول حقونه خوندي دي.', footerLang:'ژبه',
   },
 
   zh: {
@@ -241,7 +241,7 @@ const T = {
     waCtaSub:'直接消息比表单更快——大多数咨询当天就能得到回复。可用达里语、普什图语或英语发送消息。',
     waCtaBtn:'通过WhatsApp联系我们', orContact:'或通过下方邮件表单发送咨询',
     footerTagline:'从迈阿密到喀布尔，工程化阿富汗的数字未来。',
-    footerNav:'导航', footerLocations:'地点', footerCopy:'© 2025 AftabOS. 版权所有。', footerLang:'语言',
+    footerNav:'导航', footerLocations:'地点', footerCopy:'© 2026 AftabOS. 版权所有。', footerLang:'语言',
   },
 
   ar: {
@@ -301,7 +301,7 @@ const T = {
     waCtaSub:'الرسالة المباشرة أسرع من النموذج — تُجاب معظم الاستفسارات في نفس اليوم. أرسل رسالتك بالدارية أو البشتونية أو الإنجليزية.',
     waCtaBtn:'راسلنا على واتساب', orContact:'أو أرسل استفساراً عبر النموذج أدناه',
     footerTagline:'نهندس مستقبل أفغانستان الرقمي — من ميامي إلى كابول.',
-    footerNav:'التنقل', footerLocations:'المواقع', footerCopy:'© 2025 AftabOS. جميع الحقوق محفوظة.', footerLang:'اللغة',
+    footerNav:'التنقل', footerLocations:'المواقع', footerCopy:'© 2026 AftabOS. جميع الحقوق محفوظة.', footerLang:'اللغة',
   },
 };
 
