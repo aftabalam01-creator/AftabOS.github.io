@@ -50,8 +50,8 @@ const T = {
     fService1:'ERP & Logistics System', fService2:'Digital Marketplace', fService3:'Business Website',
     fService4:'AI Tools & Automation', fService5:'Cybersecurity & Systems', fService6:'Other / Not Sure',
     fMessageLabel:"Tell us what you're building", fMessagePlaceholder:'Describe your project, timeline, and any specific requirements...',
-    fSubmit:'Send Message', fSuccessTitle:'Message Received',
-    fSuccessMsg:'Thank you, {name}. Your message has been received. We will be in touch within 24 hours.',
+    fSubmit:'Send via WhatsApp', fSuccessTitle:'Opening WhatsApp',
+    fSuccessMsg:"Thank you, {name}. WhatsApp is opening with your message pre-filled — just hit send. We'll reply as soon as possible.",
     fErrRequired:'This field is required', fErrEmail:'Please enter a valid email address', fErrService:'Please select a service',
     contactInfoTitle:'Get in Touch Directly',
     labelEmail:'Email', labelPhone:'Phone', labelWhatsApp:'WhatsApp', labelMiami:'Miami Office', labelKabul:'Kabul Office',
@@ -110,8 +110,8 @@ const T = {
     fService1:'سیستم ERP و لجستیک', fService2:'بازار دیجیتال', fService3:'وب‌سایت تجاری',
     fService4:'ابزارهای هوش مصنوعی', fService5:'امنیت سایبری', fService6:'سایر / مطمئن نیستم',
     fMessageLabel:'پروژه خود را توضیح دهید', fMessagePlaceholder:'پروژه، جدول زمانی و نیازهای خاص خود را شرح دهید...',
-    fSubmit:'ارسال پیام', fSuccessTitle:'پیام دریافت شد',
-    fSuccessMsg:'ممنون، {name}. پیام شما دریافت شد. ظرف ۲۴ ساعت با شما تماس خواهیم گرفت.',
+    fSubmit:'ارسال از طریق واتساپ', fSuccessTitle:'در حال باز شدن واتساپ',
+    fSuccessMsg:'ممنون، {name}. واتساپ با پیام آماده‌شده باز می‌شود — فقط ارسال کنید. در اسرع وقت پاسخ می‌دهیم.',
     fErrRequired:'این فیلد الزامی است', fErrEmail:'لطفاً یک آدرس ایمیل معتبر وارد کنید', fErrService:'لطفاً یک خدمت انتخاب کنید',
     contactInfoTitle:'مستقیم تماس بگیرید',
     labelEmail:'ایمیل', labelPhone:'تلفن', labelWhatsApp:'واتساپ', labelMiami:'دفتر میامی', labelKabul:'دفتر کابل',
@@ -170,8 +170,8 @@ const T = {
     fService1:'ERP او لوجستیک سیستم', fService2:'ډیجیټل بازار', fService3:'سوداګریز ویبسایت',
     fService4:'AI وسیلې او اتومات', fService5:'سایبري امنیت', fService6:'نور / ډاډه نه یم',
     fMessageLabel:'ستاسو پروژه تشریح کړئ', fMessagePlaceholder:'خپله پروژه، د وخت جدول او ځانګړي اړتیاوې توضیح کړئ...',
-    fSubmit:'پیغام واستوئ', fSuccessTitle:'پیغام ترلاسه شو',
-    fSuccessMsg:'مننه، {name}. ستاسو پیغام ترلاسه شو. موږ به د ۲۴ ساعتونو دننه ستاسو سره اړیکه ونیسو.',
+    fSubmit:'واټساپ له لارې واستوئ', fSuccessTitle:'واټساپ خلاصیږي',
+    fSuccessMsg:'مننه، {name}. واټساپ ستاسو چمتو شوي پیغام سره خلاصیږي — یوازې یې واستوئ. موږ به ژر ځواب درکړو.',
     fErrRequired:'دا ساحه اړینه ده', fErrEmail:'مهرباني وکړئ یو سم بریښنالیک پته دننه کړئ', fErrService:'مهرباني وکړئ یو خدمت غوره کړئ',
     contactInfoTitle:'مستقیم اړیکه ونیسئ',
     labelEmail:'بریښنالیک', labelPhone:'ټیلیفون', labelWhatsApp:'واټساپ', labelMiami:'د میامي دفتر', labelKabul:'د کابل دفتر',
@@ -230,8 +230,8 @@ const T = {
     fService1:'ERP与物流系统', fService2:'数字市场', fService3:'商业网站',
     fService4:'AI工具与自动化', fService5:'网络安全与系统', fService6:'其他/不确定',
     fMessageLabel:'描述您的项目', fMessagePlaceholder:'描述您的项目、时间表和具体要求...',
-    fSubmit:'发送消息', fSuccessTitle:'消息已收到',
-    fSuccessMsg:'感谢您，{name}。您的消息已收到。我们将在24小时内与您联系。',
+    fSubmit:'通过WhatsApp发送', fSuccessTitle:'正在打开WhatsApp',
+    fSuccessMsg:'感谢您，{name}。WhatsApp正在打开，消息已预填写——点击发送即可。我们会尽快回复。',
     fErrRequired:'此字段为必填项', fErrEmail:'请输入有效的电子邮件地址', fErrService:'请选择一项服务',
     contactInfoTitle:'直接联系我们',
     labelEmail:'电子邮件', labelPhone:'电话', labelWhatsApp:'WhatsApp', labelMiami:'迈阿密办公室', labelKabul:'喀布尔办公室',
@@ -290,8 +290,8 @@ const T = {
     fService1:'نظام ERP والخدمات اللوجستية', fService2:'السوق الرقمية', fService3:'موقع تجاري',
     fService4:'أدوات الذكاء الاصطناعي والأتمتة', fService5:'الأمن السيبراني', fService6:'أخرى / غير متأكد',
     fMessageLabel:'أخبرنا عما تبنيه', fMessagePlaceholder:'صف مشروعك والجدول الزمني وأي متطلبات محددة...',
-    fSubmit:'إرسال الرسالة', fSuccessTitle:'تم استلام رسالتك',
-    fSuccessMsg:'شكراً لك، {name}. تم استلام رسالتك. سنتواصل معك خلال 24 ساعة.',
+    fSubmit:'إرسال عبر واتساب', fSuccessTitle:'جارٍ فتح واتساب',
+    fSuccessMsg:'شكراً لك، {name}. يتم فتح واتساب مع رسالتك جاهزة — فقط اضغط إرسال. سنرد في أقرب وقت.',
     fErrRequired:'هذا الحقل مطلوب', fErrEmail:'يرجى إدخال عنوان بريد إلكتروني صحيح', fErrService:'يرجى اختيار خدمة',
     contactInfoTitle:'تواصل مباشرة',
     labelEmail:'البريد الإلكتروني', labelPhone:'الهاتف', labelWhatsApp:'واتساب', labelMiami:'مكتب ميامي', labelKabul:'مكتب كابول',
@@ -664,22 +664,21 @@ function initForm() {
     if (!valid) return;
 
     const phone = (document.getElementById('f-phone') || {}).value || '';
-    const subject = encodeURIComponent(`AftabOS Inquiry from ${name.value.trim()} — ${company.value.trim()} via AftabOS.com`);
-    const body = encodeURIComponent([
+    const waText = encodeURIComponent([
+      `*AftabOS Inquiry*`,
       `Name: ${name.value.trim()}`,
       `Company: ${company.value.trim()}`,
       `Email: ${email.value.trim()}`,
-      `Phone/WhatsApp: ${phone || 'Not provided'}`,
+      `Phone: ${phone || 'Not provided'}`,
       `Service: ${service.options[service.selectedIndex].text}`,
       ``,
       `Message:`,
       message.value.trim(),
       ``,
-      `---`,
-      `Sent via AftabOS.com`,
+      `_Sent via AftabOS.com_`,
     ].join('\n'));
 
-    window.location.href = `mailto:aftabalammasjidi@gmail.com?subject=${subject}&body=${body}`;
+    window.open(`https://wa.me/93770696076?text=${waText}`, '_blank');
 
     const successMsg = (t.fSuccessMsg || T.en.fSuccessMsg).replace('{name}', name.value.trim());
     const successEl  = document.getElementById('form-success');
