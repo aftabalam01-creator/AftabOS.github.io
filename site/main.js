@@ -7,6 +7,7 @@ const T = {
   en: {
     dir:'ltr', flag:'🇺🇸', code:'EN',
     navServices:'Services', navWork:'Our Work', navAbout:'About', navContact:'Contact', navCta:'Contact Us',
+    heroEyebrow:'Software studio · Miami & Kabul', statProducts:'Live products', statLangs:'Languages we ship in', statCities:'Offices, Miami and Kabul', statFounded:'Founded',
     heroHeadline:'We Build the Digital Infrastructure of Afghanistan',
     heroSub:'Enterprise ERP systems, AI-powered platforms, and multilingual marketplaces, engineered for Afghan businesses and built to global standards.',
     heroCta1:'Explore Our Work', heroCta2:'Get in Touch',
@@ -67,6 +68,7 @@ const T = {
   fa: {
     dir:'rtl', flag:'🇦🇫', code:'دری',
     navServices:'خدمات', navWork:'کارهای ما', navAbout:'درباره ما', navContact:'تماس', navCta:'تماس با ما',
+    heroEyebrow:'استودیوی نرم‌افزار · میامی و کابل', statProducts:'محصول فعال', statLangs:'زبان پشتیبانی‌شده', statCities:'دفتر، میامی و کابل', statFounded:'سال تأسیس',
     heroHeadline:'ما زیرساخت دیجیتال افغانستان را می‌سازیم',
     heroSub:'سیستم‌های ERP سازمانی، پلتفرم‌های هوش مصنوعی، و بازارهای چندزبانه — مهندسی‌شده برای کسب‌وکارهای افغان، ساخته‌شده با استانداردهای جهانی.',
     heroCta1:'مشاهده کارهای ما', heroCta2:'تماس بگیرید',
@@ -127,6 +129,7 @@ const T = {
   ps: {
     dir:'rtl', flag:'🇦🇫', code:'پښتو',
     navServices:'خدمتونه', navWork:'زموږ کارونه', navAbout:'زموږ د پیژندنې', navContact:'اړیکه', navCta:'له موږ سره اړیکه ونیسئ',
+    heroEyebrow:'د سافټویر سټوډیو · میامي او کابل', statProducts:'فعال محصولات', statLangs:'ملاتړ شوې ژبې', statCities:'دفترونه، میامي او کابل', statFounded:'د تاسیس کال',
     heroHeadline:'موږ د افغانستان ډیجیټل زیربنا جوړوو',
     heroSub:'د سازمانونو لپاره ERP سیستمونه، د AI پر بنسټ پلیټفارمونه، او ګڼ ژبیز بازارونه — د افغان سوداګرۍ لپاره انجینیري شوي، د نړیوالو معیارونو سره جوړ شوي.',
     heroCta1:'زموږ کارونه وګورئ', heroCta2:'اړیکه ونیسئ',
@@ -187,6 +190,7 @@ const T = {
   zh: {
     dir:'ltr', flag:'🇨🇳', code:'中文',
     navServices:'服务', navWork:'项目', navAbout:'关于', navContact:'联系', navCta:'联系我们',
+    heroEyebrow:'软件工作室 · 迈阿密与喀布尔', statProducts:'上线产品', statLangs:'支持语言', statCities:'办公地点，迈阿密与喀布尔', statFounded:'成立年份',
     heroHeadline:'我们构建阿富汗的数字基础设施',
     heroSub:'企业级ERP系统、AI赋能平台与多语言数字市场——专为阿富汗企业打造，符合国际工程标准。',
     heroCta1:'查看我们的项目', heroCta2:'立即联系',
@@ -247,6 +251,7 @@ const T = {
   ar: {
     dir:'rtl', flag:'🇸🇦', code:'العربية',
     navServices:'الخدمات', navWork:'أعمالنا', navAbout:'من نحن', navContact:'اتصل', navCta:'اتصل بنا',
+    heroEyebrow:'استوديو برمجيات · ميامي وكابول', statProducts:'منتجات نشطة', statLangs:'لغات مدعومة', statCities:'مكاتب، ميامي وكابول', statFounded:'سنة التأسيس',
     heroHeadline:'نبني البنية التحتية الرقمية لأفغانستان',
     heroSub:'أنظمة ERP المؤسسية، والمنصات المدعومة بالذكاء الاصطناعي، والأسواق متعددة اللغات — مهندسة للأعمال الأفغانية، مبنية وفق المعايير العالمية.',
     heroCta1:'استعرض أعمالنا', heroCta2:'تواصل معنا',
@@ -349,160 +354,13 @@ function applyLanguage(lang) {
 }
 
 /* ══════════════════════════════════════
-   CUSTOM CURSOR
-══════════════════════════════════════ */
-function initCursor() {
-  const isTouch = window.matchMedia('(hover: none)').matches;
-  const cursor = document.getElementById('cursor');
-  if (!cursor || isTouch) return;
-
-  let mx = window.innerWidth / 2, my = window.innerHeight / 2;
-  let cx = mx, cy = my;
-
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-
-  (function lerp() {
-    cx += (mx - cx) * 0.14;
-    cy += (my - cy) * 0.14;
-    cursor.style.left = cx + 'px';
-    cursor.style.top  = cy + 'px';
-    requestAnimationFrame(lerp);
-  })();
-
-  const hoverTargets = 'a, button, [data-magnetic], .service-card, .project-card, .testimonial-card, .why-card';
-  document.querySelectorAll(hoverTargets).forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
-  });
-
-  document.addEventListener('mousedown', e => {
-    cursor.classList.add('clicking');
-    spawnRipple(e.clientX, e.clientY);
-  });
-  document.addEventListener('mouseup', () => cursor.classList.remove('clicking'));
-}
-
-function spawnRipple(x, y) {
-  const r = document.createElement('div');
-  r.className = 'cursor-ripple';
-  r.style.left = x + 'px';
-  r.style.top  = y + 'px';
-  document.body.appendChild(r);
-  setTimeout(() => r.remove(), 420);
-}
-
-/* ══════════════════════════════════════
-   TOUCH RIPPLE
-══════════════════════════════════════ */
-function initTouchRipple() {
-  if (!window.matchMedia('(hover: none)').matches) return;
-  const targets = '.btn, .service-card, .project-card, .testimonial-card';
-  document.querySelectorAll(targets).forEach(el => {
-    el.style.position = el.style.position || 'relative';
-    el.style.overflow = 'hidden';
-    el.addEventListener('touchstart', e => {
-      const rect = el.getBoundingClientRect();
-      const touch = e.touches[0];
-      const r = document.createElement('div');
-      r.className = 'tap-ripple';
-      r.style.left = (touch.clientX - rect.left) + 'px';
-      r.style.top  = (touch.clientY - rect.top)  + 'px';
-      el.appendChild(r);
-      setTimeout(() => r.remove(), 420);
-    }, { passive: true });
-  });
-}
-
-/* ══════════════════════════════════════
-   MAGNETIC BUTTONS
-══════════════════════════════════════ */
-function initMagnetic() {
-  if (window.matchMedia('(hover: none)').matches) return;
-  document.querySelectorAll('[data-magnetic]').forEach(btn => {
-    let resetTimer;
-    document.addEventListener('mousemove', e => {
-      const rect = btn.getBoundingClientRect();
-      const cx = rect.left + rect.width  / 2;
-      const cy = rect.top  + rect.height / 2;
-      const dx = e.clientX - cx;
-      const dy = e.clientY - cy;
-      const bdx = Math.max(0, Math.abs(dx) - rect.width  / 2);
-      const bdy = Math.max(0, Math.abs(dy) - rect.height / 2);
-      const dist = Math.sqrt(bdx * bdx + bdy * bdy);
-      if (dist < 70) {
-        clearTimeout(resetTimer);
-        btn.style.transition = 'transform 80ms ease';
-        const pull = (1 - dist / 70) * 8;
-        const angle = Math.atan2(dy, dx);
-        btn.style.transform = `translate(${Math.cos(angle) * pull}px, ${Math.sin(angle) * pull}px)`;
-      } else if (btn.style.transform) {
-        resetTimer = setTimeout(() => {
-          btn.style.transition = 'transform 400ms cubic-bezier(0.34,1.56,0.64,1)';
-          btn.style.transform = '';
-        }, 10);
-      }
-    });
-  });
-}
-
-/* ══════════════════════════════════════
-   PARTICLE CANVAS
-══════════════════════════════════════ */
-function initParticles() {
-  const canvas = document.getElementById('hero-canvas');
-  if (!canvas) return;
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const ctx = canvas.getContext('2d');
-  const N = 55, CONN = 120;
-  let W, H, pts = [];
-
-  function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-  }
-  function mkPt() {
-    return { x: Math.random()*W, y: Math.random()*H, vx:(Math.random()-.5)*.22, vy:(Math.random()-.5)*.22 };
-  }
-  function init() { resize(); pts = Array.from({length:N}, mkPt); }
-  function draw() {
-    ctx.clearRect(0,0,W,H);
-    for (let i=0;i<N;i++) {
-      const p=pts[i];
-      p.x+=p.vx; p.y+=p.vy;
-      if(p.x<0||p.x>W) p.vx*=-1;
-      if(p.y<0||p.y>H) p.vy*=-1;
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,1.5,0,Math.PI*2);
-      ctx.fillStyle='rgba(201,168,76,0.45)';
-      ctx.fill();
-      for(let j=i+1;j<N;j++){
-        const q=pts[j];
-        const d=Math.hypot(p.x-q.x,p.y-q.y);
-        if(d<CONN){
-          ctx.beginPath();
-          ctx.moveTo(p.x,p.y);
-          ctx.lineTo(q.x,q.y);
-          ctx.strokeStyle=`rgba(201,168,76,${0.1*(1-d/CONN)})`;
-          ctx.lineWidth=.6;
-          ctx.stroke();
-        }
-      }
-    }
-    requestAnimationFrame(draw);
-  }
-  init();
-  draw();
-  window.addEventListener('resize', resize, {passive:true});
-}
-
-/* ══════════════════════════════════════
    NAV SCROLL
 ══════════════════════════════════════ */
 function initNav() {
   const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  }, {passive:true});
+  const update = () => nav.classList.toggle('scrolled', window.scrollY > 24);
+  window.addEventListener('scroll', update, { passive: true });
+  update();
 }
 
 /* ══════════════════════════════════════
@@ -517,21 +375,22 @@ function initMobileMenu() {
   function open() {
     btn.classList.add('open');
     menu.classList.add('open');
-    if (overlay) overlay.classList.add('open');
-    btn.setAttribute('aria-expanded','true');
-    document.body.style.overflow='hidden';
+    overlay.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
   }
   function close() {
     btn.classList.remove('open');
     menu.classList.remove('open');
-    if (overlay) overlay.classList.remove('open');
-    btn.setAttribute('aria-expanded','false');
-    document.body.style.overflow='';
+    overlay.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
   }
 
   btn.addEventListener('click', () => btn.classList.contains('open') ? close() : open());
-  if (overlay) overlay.addEventListener('click', close);
+  overlay.addEventListener('click', close);
   menu.querySelectorAll('.mob-link, .mob-cta').forEach(a => a.addEventListener('click', close));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
 }
 
 /* ══════════════════════════════════════
@@ -540,37 +399,40 @@ function initMobileMenu() {
 function initLangSwitcher() {
   document.querySelectorAll('.lang-switcher').forEach(sw => {
     const btn = sw.querySelector('[data-lang-toggle]');
-    if (btn) btn.addEventListener('click', e => {
+    btn.addEventListener('click', e => {
       e.stopPropagation();
-      sw.classList.toggle('open');
+      const isOpen = sw.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(isOpen));
     });
   });
   document.querySelectorAll('.lang-option').forEach(opt => {
     opt.addEventListener('click', () => {
       applyLanguage(opt.getAttribute('data-lang'));
-      document.querySelectorAll('.lang-switcher').forEach(s => s.classList.remove('open'));
+      closeAll();
     });
   });
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.lang-switcher').forEach(s => s.classList.remove('open'));
-  });
+  function closeAll() {
+    document.querySelectorAll('.lang-switcher.open').forEach(s => {
+      s.classList.remove('open');
+      s.querySelector('[data-lang-toggle]').setAttribute('aria-expanded', 'false');
+    });
+  }
+  document.addEventListener('click', closeAll);
 }
 
 /* ══════════════════════════════════════
-   SCROLL ANIMATIONS (staggered)
+   SCROLL REVEAL
 ══════════════════════════════════════ */
 function initScrollReveal() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-  // Assign stagger delays to siblings within each parent
-  document.querySelectorAll(
-    '.services-grid, .projects-list, .why-features, .testimonials-grid'
-  ).forEach(grid => {
-    grid.querySelectorAll('.fade-up').forEach((el, i) => {
-      el.style.transitionDelay = `${i * 60}ms`;
+  if (!('IntersectionObserver' in window)) {
+    document.documentElement.classList.add('no-io');
+    return;
+  }
+  document.querySelectorAll('.bento, .projects, .pillars, .testimonials').forEach(group => {
+    group.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = `${Math.min(i, 5) * 70}ms`;
     });
   });
-
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => {
       if (e.isIntersecting) {
@@ -578,41 +440,45 @@ function initScrollReveal() {
         io.unobserve(e.target);
       }
     });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+  }, { threshold: 0.08, rootMargin: '0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 }
 
 /* ══════════════════════════════════════
-   COUNT-UP (Why section numbers)
+   COUNT-UP (hero facts)
 ══════════════════════════════════════ */
-function countUp(el, target, duration, prefix) {
-  const start = performance.now();
-  function step(now) {
-    const elapsed = now - start;
-    const progress = Math.min(elapsed / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    const val = Math.round(eased * target);
-    el.textContent = prefix + String(val).padStart(2, '0');
-    if (progress < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
+function initCountUp() {
+  const els = document.querySelectorAll('[data-count]');
+  if (!els.length || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  els.forEach(el => {
+    const target = parseInt(el.getAttribute('data-count'), 10);
+    const start = performance.now() + 700;
+    const dur = 1100;
+    el.textContent = '0';
+    function step(now) {
+      const p = Math.min(Math.max((now - start) / dur, 0), 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = String(Math.round(eased * target));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
 }
 
-function initCountUp() {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        const target = parseInt(e.target.getAttribute('data-count'), 10);
-        const prefix = e.target.getAttribute('data-prefix') || '';
-        countUp(e.target, target, 1200, prefix);
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('[data-count]').forEach(el => io.observe(el));
+/* ══════════════════════════════════════
+   PRODUCT MOCK: parking lot grid
+══════════════════════════════════════ */
+function initLotMock() {
+  const lot = document.querySelector('[data-lot]');
+  if (!lot) return;
+  const pattern = '1101110110111011011010110111001011011101101110110101';
+  const frag = document.createDocumentFragment();
+  for (let i = 0; i < 48; i++) {
+    const cell = document.createElement('i');
+    if (pattern[i] === '1') cell.className = i % 11 === 0 ? 'hot' : 'on';
+    frag.appendChild(cell);
+  }
+  lot.appendChild(frag);
 }
 
 /* ══════════════════════════════════════
@@ -693,15 +559,12 @@ function initForm() {
    INIT
 ══════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
+  applyLanguage(currentLang);
   initNav();
   initMobileMenu();
   initLangSwitcher();
-  initParticles();
   initScrollReveal();
   initCountUp();
-  initCursor();
-  initTouchRipple();
-  initMagnetic();
+  initLotMock();
   initForm();
-  applyLanguage(currentLang);
 });
