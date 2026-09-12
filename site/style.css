@@ -397,7 +397,7 @@ html[dir="rtl"] .mobile-menu { transform: translateX(-105%); }
   direction: rtl;
 }
 .hero-copy { max-width: 62rem; }
-#hero h1 { max-width: 12ch; margin-bottom: 1.6rem; }
+#hero h1 { max-width: 16ch; margin-bottom: 1.6rem; }
 .hero-sub {
   font-size: clamp(1.1rem, 1.5vw, 1.3rem);
   line-height: 1.5;
