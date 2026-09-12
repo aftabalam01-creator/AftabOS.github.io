@@ -911,7 +911,7 @@ html.no-io .reveal { opacity: 1; transform: none; }
 
 @media (max-width: 860px) {
   :root { --nav-h: 66px; }
-  .nav-links, .nav-right .btn { display: none; }
+  .nav-links, .nav-right { display: none; }
   .hamburger { display: flex; }
   .section-head { grid-template-columns: 1fr; gap: 1rem; }
   .project, .project:nth-child(even) { grid-template-columns: 1fr; }
