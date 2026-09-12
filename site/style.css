@@ -381,21 +381,6 @@ html[dir="rtl"] .mobile-menu { transform: translateX(-105%); }
     0 0 0 70px rgba(229,153,43,.035),
     0 40px 90px -30px rgba(211,132,27,.55);
 }
-.hero-mark {
-  position: absolute;
-  z-index: -1;
-  inset-inline-start: -.05em;
-  bottom: -.28em;
-  font-family: 'Vazirmatn', sans-serif;
-  font-weight: 800;
-  font-size: clamp(9rem, 30vw, 27rem);
-  line-height: 1;
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(27,26,23,.13);
-  pointer-events: none;
-  user-select: none;
-  direction: rtl;
-}
 .hero-copy { max-width: 62rem; }
 #hero h1 { max-width: 16ch; margin-bottom: 1.6rem; }
 .hero-sub {
@@ -923,7 +908,6 @@ html.no-io .reveal { opacity: 1; transform: none; }
   .hero-facts li:nth-child(odd) { padding-inline-start: 0; }
   .hero-facts li:nth-child(even) { border-inline-end: 0; }
   .hero-facts li:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-  .hero-mark { font-size: 42vw; bottom: -.22em; }
 }
 
 @media (max-width: 600px) {
